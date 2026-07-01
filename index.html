@@ -7,163 +7,171 @@
 <meta name="description" content="Herramientas bíblicas y prácticas para vivir tu fe con propósito">
 <meta name="theme-color" content="#5C3D1E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:0;}
-.app{width:100%;max-width:420px;margin:0 auto;background:#F5F0E8;min-height:100vh;display:flex;flex-direction:column;position:relative;}
+body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;display:flex;justify-content:center;}
+.app{width:100%;max-width:420px;margin:0 auto;background:#F5F0E8;min-height:100vh;display:flex;flex-direction:column;}
 
 /* SPLASH */
-.splash{position:fixed;inset:0;background:#5C3D1E;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;transition:opacity 0.5s;}
+.splash{position:fixed;inset:0;background:#5C3D1E;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;transition:opacity 0.6s;}
 .splash.hide{opacity:0;pointer-events:none;}
-.splash-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:36px;color:#F5F0E8;margin-bottom:8px;}
-.splash-sub{font-size:13px;color:#A0714F;letter-spacing:0.1em;}
-.splash-leaf{font-size:48px;margin-bottom:24px;}
+.splash-leaf{font-size:52px;margin-bottom:20px;}
+.splash-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:38px;color:#F5F0E8;margin-bottom:6px;}
+.splash-sub{font-size:12px;color:#A0714F;letter-spacing:0.12em;text-transform:uppercase;}
 
 /* HEADER */
-.header{background:#5C3D1E;padding:20px 20px 18px;flex-shrink:0;}
-.header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.header{background:#5C3D1E;padding:18px 18px 16px;flex-shrink:0;}
+.header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
 .brand{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:#F5F0E8;}
-.notif-btn{width:34px;height:34px;border-radius:50%;background:rgba(245,240,232,0.15);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;}
-.notif-btn i{color:#F5F0E8;font-size:17px;}
-.user-row{display:flex;align-items:center;gap:12px;}
-.avatar{width:42px;height:42px;border-radius:50%;background:#A0714F;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:#F5F0E8;flex-shrink:0;}
-.user-info p{font-size:11px;color:rgba(245,240,232,0.65);}
+.user-row{display:flex;align-items:center;gap:10px;}
+.avatar{width:40px;height:40px;border-radius:50%;background:#A0714F;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#F5F0E8;flex-shrink:0;}
+.user-info p{font-size:11px;color:rgba(245,240,232,0.6);}
 .user-info h3{font-size:15px;font-weight:500;color:#F5F0E8;font-family:'Playfair Display',serif;}
 .nivel-badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#A0714F;color:#F5F0E8;margin-top:3px;}
-.xp-wrap{margin-top:14px;}
-.xp-labels{display:flex;justify-content:space-between;margin-bottom:5px;}
-.xp-labels span{font-size:11px;color:rgba(245,240,232,0.75);}
+.xp-wrap{margin-top:12px;}
+.xp-labels{display:flex;justify-content:space-between;margin-bottom:4px;}
+.xp-labels span{font-size:11px;color:rgba(245,240,232,0.7);}
 .xp-bar{height:7px;background:rgba(245,240,232,0.2);border-radius:99px;overflow:hidden;}
-.xp-fill{height:100%;background:#A0714F;border-radius:99px;transition:width 0.6s ease;}
+.xp-fill{height:100%;background:#A0714F;border-radius:99px;transition:width 0.5s;}
 
 /* STATS */
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 16px;}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 14px;}
 .stat{background:#fff;border-radius:12px;padding:10px;text-align:center;border:0.5px solid rgba(0,0,0,0.06);}
 .stat-num{font-size:22px;font-weight:500;color:#A0714F;font-family:'Playfair Display',serif;}
-.stat-label{font-size:10px;color:#888;margin-top:2px;}
+.stat-label{font-size:10px;color:#999;margin-top:2px;}
 
 /* NAV TABS */
-.nav-tabs{display:flex;gap:6px;padding:0 16px 14px;overflow-x:auto;scrollbar-width:none;}
+.nav-tabs{display:flex;gap:6px;padding:0 14px 12px;overflow-x:auto;scrollbar-width:none;}
 .nav-tabs::-webkit-scrollbar{display:none;}
-.nav-tab{font-size:12px;padding:7px 14px;border-radius:99px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;color:#888;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'Montserrat',sans-serif;transition:all 0.15s;}
+.nav-tab{font-size:12px;padding:7px 14px;border-radius:99px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;color:#888;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all 0.15s;}
 .nav-tab.active{background:#A0714F;color:#F5F0E8;border-color:transparent;}
 
 /* CONTENT */
-.content{flex:1;padding:0 16px 100px;}
+.content{flex:1;padding:0 14px 100px;overflow-y:auto;}
 .screen{display:none;}
 .screen.active{display:block;}
-.section-title{font-size:13px;font-weight:500;color:#5C3D1E;margin-bottom:12px;}
+.sec-title{font-size:13px;font-weight:500;color:#5C3D1E;margin-bottom:10px;}
 
-/* LESSON CARDS */
-.lesson-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:10px;cursor:pointer;transition:border-color 0.15s,transform 0.1s;}
-.lesson-card:hover{border-color:#A0714F;transform:translateY(-1px);}
-.lesson-card.locked{opacity:0.5;cursor:not-allowed;}
-.lesson-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
-.lesson-icon{width:38px;height:38px;border-radius:10px;background:#F5F0E8;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.lesson-icon i{color:#A0714F;font-size:19px;}
-.lesson-icon.done{background:#8FA89A;}
-.lesson-icon.done i{color:#fff;}
-.lesson-icon.active-icon{background:#A0714F;}
-.lesson-icon.active-icon i{color:#fff;}
-.lesson-meta{flex:1;min-width:0;}
-.lesson-title{font-size:14px;font-weight:500;color:#333;line-height:1.3;}
-.lesson-sub{font-size:11px;color:#888;margin-top:2px;}
-.lesson-badge{font-size:10px;padding:3px 8px;border-radius:99px;flex-shrink:0;}
-.b-done{background:#8FA89A;color:#fff;}
-.b-active{background:#A0714F;color:#fff;}
-.b-lock{background:#f0ede8;color:#aaa;}
+/* LECCIONES */
+.lesson-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:10px;cursor:pointer;transition:border-color 0.15s;}
+.lesson-card:active{border-color:#A0714F;}
+.lesson-header{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.l-icon{width:38px;height:38px;border-radius:10px;background:#F5F0E8;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.l-icon i{color:#A0714F;font-size:18px;}
+.l-meta{flex:1;min-width:0;}
+.l-title{font-size:14px;font-weight:500;color:#333;line-height:1.3;}
+.l-sub{font-size:11px;color:#888;margin-top:2px;}
+.l-badge{font-size:10px;padding:3px 8px;border-radius:99px;flex-shrink:0;}
+.b-inicio{background:#F5F0E8;color:#A0714F;}
+.b-progreso{background:#A0714F;color:#fff;}
+.b-completa{background:#8FA89A;color:#fff;}
+.b-lock{background:#f0f0f0;color:#bbb;}
 .prog-bar{height:5px;background:#F5F0E8;border-radius:99px;overflow:hidden;}
 .prog-fill{height:100%;border-radius:99px;background:#A0714F;transition:width 0.5s;}
 
-/* LESSON DETAIL */
-.lesson-detail{display:none;background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:16px;margin-bottom:10px;}
+/* DETALLE LECCION */
+.lesson-detail{display:none;background:#fff;border-radius:14px;border:0.5px solid #A0714F;padding:16px;margin-bottom:10px;}
 .lesson-detail.open{display:block;}
-.detail-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.detail-title{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:#5C3D1E;}
-.close-btn{width:30px;height:30px;border-radius:50%;border:none;background:#F5F0E8;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.close-btn i{color:#888;font-size:16px;}
-.versiculo-box{background:#F5F0E8;border-radius:10px;padding:12px;margin-bottom:12px;}
-.versiculo-texto{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#5C3D1E;line-height:1.6;}
-.versiculo-ref{font-size:11px;color:#A0714F;margin-top:4px;}
-.detail-text{font-size:13px;color:#555;line-height:1.7;margin-bottom:12px;}
-.preview-label{font-size:11px;font-weight:500;color:#A0714F;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;}
-.cta-libro{background:#A0714F;color:#F5F0E8;border:none;border-radius:99px;padding:12px 20px;font-size:13px;font-family:'Montserrat',sans-serif;cursor:pointer;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;transition:background 0.15s;}
-.cta-libro:hover{background:#8B5E3C;}
-.cta-libro i{font-size:16px;}
+.d-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.d-title{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#5C3D1E;}
+.close-btn{width:28px;height:28px;border-radius:50%;border:none;background:#F5F0E8;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.close-btn i{color:#888;font-size:15px;}
+.vers-box{background:#F5F0E8;border-radius:10px;padding:12px;margin-bottom:12px;}
+.vers-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:#5C3D1E;line-height:1.6;}
+.vers-ref{font-size:11px;color:#A0714F;margin-top:4px;}
+.d-text{font-size:13px;color:#555;line-height:1.7;margin-bottom:10px;}
+.preview-tag{font-size:10px;font-weight:500;color:#A0714F;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.d-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+.btn-iniciar{background:#A0714F;color:#F5F0E8;border:none;border-radius:99px;padding:10px 18px;font-size:12px;font-family:'Montserrat',sans-serif;cursor:pointer;flex:1;transition:background 0.15s;}
+.btn-iniciar:hover{background:#8B5E3C;}
+.btn-hotmart{background:#F5F0E8;color:#A0714F;border:0.5px solid #A0714F;border-radius:99px;padding:10px 18px;font-size:12px;font-family:'Montserrat',sans-serif;cursor:pointer;flex:1;}
 
 /* HABITOS */
-.habit-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:10px;}
-.habit-day-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.habit-day-title{font-size:13px;font-weight:500;color:#5C3D1E;}
-.habit-day-sub{font-size:11px;color:#888;}
-.habit-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid #f0ede8;}
-.habit-row:last-child{border-bottom:none;padding-bottom:0;}
-.habit-check{width:22px;height:22px;border-radius:50%;border:1.5px solid #A0714F;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all 0.2s;}
-.habit-check.checked{background:#A0714F;border-color:#A0714F;}
-.habit-check i{color:#fff;font-size:12px;display:none;}
-.habit-check.checked i{display:block;}
-.habit-text{font-size:13px;color:#444;flex:1;}
-.xp-pill{font-size:10px;padding:2px 7px;border-radius:99px;background:#F5F0E8;color:#A0714F;flex-shrink:0;}
-.habit-complete{background:#8FA89A;border-radius:10px;padding:12px;text-align:center;margin-top:10px;display:none;}
-.habit-complete.show{display:block;}
-.habit-complete p{font-size:13px;color:#fff;font-family:'Playfair Display',serif;font-style:italic;}
+.dia-nav{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:12px 14px;margin-bottom:10px;}
+.dia-nav-btn{width:34px;height:34px;border-radius:50%;border:0.5px solid rgba(0,0,0,0.12);background:#F5F0E8;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+.dia-nav-btn i{color:#A0714F;font-size:18px;}
+.dia-nav-btn:disabled{opacity:0.3;cursor:not-allowed;}
+.dia-info{text-align:center;}
+.dia-num{font-size:18px;font-weight:500;color:#5C3D1E;font-family:'Playfair Display',serif;}
+.dia-sub{font-size:11px;color:#888;}
+.dia-tema-badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#A0714F;color:#F5F0E8;margin-top:3px;}
 
-/* TARJETAS */
-.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-.afirm-card{background:#5C3D1E;border-radius:14px;padding:16px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;position:relative;overflow:hidden;transition:transform 0.15s;}
-.afirm-card:hover{transform:translateY(-2px);}
+.habit-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:10px;}
+.habit-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:0.5px solid #f5f0e8;}
+.habit-row:last-child{border-bottom:none;padding-bottom:0;}
+.h-check{width:24px;height:24px;border-radius:50%;border:1.5px solid #A0714F;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all 0.2s;}
+.h-check.on{background:#A0714F;border-color:#A0714F;}
+.h-check i{color:#fff;font-size:12px;opacity:0;transition:opacity 0.2s;}
+.h-check.on i{opacity:1;}
+.h-text{font-size:13px;color:#444;flex:1;line-height:1.4;}
+.h-xp{font-size:10px;padding:2px 7px;border-radius:99px;background:#F5F0E8;color:#A0714F;flex-shrink:0;}
+
+.vers-dia{background:#F5F0E8;border-radius:12px;padding:12px;margin-bottom:10px;}
+.vers-dia-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:#5C3D1E;line-height:1.6;}
+.vers-dia-ref{font-size:11px;color:#A0714F;margin-top:4px;}
+
+.afirm-dia{background:#5C3D1E;border-radius:12px;padding:14px;margin-bottom:10px;}
+.afirm-dia-label{font-size:10px;color:#8FA89A;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em;}
+.afirm-dia-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#F5F0E8;line-height:1.55;}
+.afirm-dia-ref{font-size:11px;color:#8FA89A;margin-top:6px;}
+
+.complete-banner{background:#8FA89A;border-radius:12px;padding:14px;text-align:center;margin-top:10px;display:none;}
+.complete-banner.show{display:block;}
+.complete-banner p{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#fff;line-height:1.5;}
+
+/* AFIRMACIONES */
+.afirm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.afirm-card{background:#5C3D1E;border-radius:14px;padding:14px;min-height:110px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
 .afirm-card.hoy{border:2px solid #A0714F;}
-.hoy-badge{position:absolute;top:8px;right:8px;font-size:9px;background:#A0714F;color:#F5F0E8;padding:2px 6px;border-radius:99px;}
-.afirm-text{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:#F5F0E8;line-height:1.55;}
-.afirm-verse{font-size:10px;color:#8FA89A;margin-top:8px;}
-.afirm-deco{position:absolute;bottom:-10px;right:-6px;font-size:42px;opacity:0.08;}
+.hoy-tag{position:absolute;top:7px;right:7px;font-size:9px;background:#A0714F;color:#F5F0E8;padding:2px 6px;border-radius:99px;}
+.afirm-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:#F5F0E8;line-height:1.5;}
+.afirm-ref{font-size:10px;color:#8FA89A;margin-top:6px;}
+.afirm-deco{position:absolute;bottom:-10px;right:-6px;font-size:42px;opacity:0.07;}
 
 /* LOGROS */
+.nivel-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:14px;}
+.nivel-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:0.5px solid #f5f0e8;}
+.nivel-row:last-child{border-bottom:none;}
+.n-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.n-icon.on{background:#A0714F;}
+.n-icon.off{background:#F5F0E8;}
+.n-icon.on i{color:#fff;font-size:16px;}
+.n-icon.off i{color:#ccc;font-size:16px;}
+.n-info{flex:1;}
+.n-name{font-size:13px;font-weight:500;color:#333;}
+.n-req{font-size:11px;color:#888;}
+.n-xp{font-size:11px;color:#A0714F;font-weight:500;}
+
 .medallas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .medalla{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:12px 8px;text-align:center;}
-.medalla.ganada{border-color:#A0714F;background:#fdf9f5;}
-.m-icon{width:42px;height:42px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 7px;}
-.medalla.ganada .m-icon{background:#A0714F;}
-.m-icon i{color:#A0714F;font-size:20px;}
-.medalla.ganada .m-icon i{color:#fff;}
+.medalla.on{border-color:#A0714F;background:#fdf9f5;}
+.m-icon{width:40px;height:40px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;}
+.medalla.on .m-icon{background:#A0714F;}
+.m-icon i{color:#ccc;font-size:19px;}
+.medalla.on .m-icon i{color:#fff;}
 .m-name{font-size:10px;color:#888;line-height:1.3;}
-.medalla.ganada .m-name{color:#5C3D1E;font-weight:500;}
-.m-xp{font-size:9px;color:#A0714F;margin-top:3px;}
-
-.nivel-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:14px;}
-.nivel-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:0.5px solid #f0ede8;}
-.nivel-row:last-child{border-bottom:none;}
-.nivel-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.nivel-icon.activo{background:#A0714F;}
-.nivel-icon.inactivo{background:#F5F0E8;}
-.nivel-icon i{font-size:15px;}
-.nivel-icon.activo i{color:#fff;}
-.nivel-icon.inactivo i{color:#ccc;}
-.nivel-info{flex:1;}
-.nivel-nombre{font-size:13px;font-weight:500;color:#333;}
-.nivel-req{font-size:11px;color:#888;}
+.medalla.on .m-name{color:#5C3D1E;font-weight:500;}
+.m-pts{font-size:9px;color:#A0714F;margin-top:2px;}
 
 /* PROXIMO */
 .coming-card{background:#fff;border:0.5px dashed rgba(0,0,0,0.15);border-radius:14px;padding:18px;text-align:center;margin-bottom:10px;}
-.coming-icon{width:50px;height:50px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
+.coming-icon{width:48px;height:48px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
 .coming-icon i{color:#A0714F;font-size:22px;}
-.coming-title{font-size:14px;font-weight:500;color:#333;margin-bottom:4px;font-family:'Playfair Display',serif;}
+.coming-title{font-family:'Playfair Display',serif;font-size:15px;color:#333;margin-bottom:5px;}
 .coming-sub{font-size:12px;color:#888;line-height:1.5;}
-.coming-notify{background:#F5F0E8;border:none;border-radius:99px;padding:8px 16px;font-size:12px;color:#A0714F;cursor:pointer;margin-top:10px;font-family:'Montserrat',sans-serif;}
+.btn-avisar{background:#F5F0E8;border:none;border-radius:99px;padding:8px 16px;font-size:12px;color:#A0714F;cursor:pointer;margin-top:10px;font-family:'Montserrat',sans-serif;}
 
 /* BOTTOM NAV */
-.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:420px;display:flex;justify-content:space-around;padding:10px 0 16px;background:#fff;border-top:0.5px solid rgba(0,0,0,0.08);z-index:100;}
-.nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:0 10px;border:none;background:transparent;}
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:420px;display:flex;justify-content:space-around;padding:8px 0 14px;background:#fff;border-top:0.5px solid rgba(0,0,0,0.08);z-index:100;}
+.nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:0 8px;border:none;background:transparent;}
 .nav-item i{font-size:22px;color:#ccc;transition:color 0.15s;}
-.nav-item span{font-size:9px;color:#ccc;font-family:'Montserrat',sans-serif;}
-.nav-item.active i{color:#A0714F;}
-.nav-item.active span{color:#A0714F;}
+.nav-item span{font-size:9px;color:#ccc;font-family:'Montserrat',sans-serif;transition:color 0.15s;}
+.nav-item.active i,.nav-item.active span{color:#A0714F;}
 
 /* TOAST */
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#5C3D1E;color:#F5F0E8;padding:10px 20px;border-radius:99px;font-size:13px;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;}
+.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%) translateY(10px);background:#5C3D1E;color:#F5F0E8;padding:10px 20px;border-radius:99px;font-size:13px;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
@@ -180,36 +188,35 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
   <div class="header">
     <div class="header-top">
       <span class="brand">Es por Fe</span>
-      <button class="notif-btn" aria-label="Notificaciones"><i class="ti ti-bell" aria-hidden="true"></i></button>
+      <span class="nivel-badge" id="nivel-badge">Semilla de fe</span>
     </div>
     <div class="user-row">
       <div class="avatar">YH</div>
       <div class="user-info">
         <p>Bienvenida de nuevo</p>
-        <h3>Yanneth Hernández</h3>
-        <span class="nivel-badge" id="nivel-nombre">Semilla de fe</span>
+        <h3 id="user-name">Yanneth Hernández</h3>
       </div>
     </div>
     <div class="xp-wrap">
       <div class="xp-labels">
-        <span id="nivel-label">Nivel 1</span>
-        <span id="xp-label">350 / 1000 XP</span>
+        <span id="nivel-label">Nivel 1 — Semilla de fe</span>
+        <span id="xp-label">0 / 1000 XP</span>
       </div>
-      <div class="xp-bar"><div class="xp-fill" id="xp-fill" style="width:35%"></div></div>
+      <div class="xp-bar"><div class="xp-fill" id="xp-fill" style="width:0%"></div></div>
     </div>
   </div>
 
   <div class="stats-row">
     <div class="stat">
-      <div class="stat-num" id="dias-stat">7</div>
+      <div class="stat-num" id="stat-dias">0</div>
       <div class="stat-label">días seguidos</div>
     </div>
     <div class="stat">
-      <div class="stat-num" id="habitos-stat">3</div>
+      <div class="stat-num" id="stat-habitos">0</div>
       <div class="stat-label">hábitos hoy</div>
     </div>
     <div class="stat">
-      <div class="stat-num" id="xp-stat">350</div>
+      <div class="stat-num" id="stat-xp">0</div>
       <div class="stat-label">puntos XP</div>
     </div>
   </div>
@@ -219,228 +226,240 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
     <div class="nav-tab" onclick="setTab(this,'habitos')">Hábitos</div>
     <div class="nav-tab" onclick="setTab(this,'afirmaciones')">Afirmaciones</div>
     <div class="nav-tab" onclick="setTab(this,'logros')">Logros</div>
-    <div class="nav-tab" onclick="setTab(this,'proximo')">Próximo</div>
+    <div class="nav-tab" onclick="setTab(this,'proximo')">Próximamente</div>
   </div>
 
   <div class="content">
 
     <!-- LIBRO -->
     <div id="screen-libro" class="screen active">
-      <p class="section-title">Tu camino de fe</p>
+      <p class="sec-title">Tu camino de fe</p>
 
-      <div class="lesson-card" onclick="toggleDetail('d1')">
+      <div class="lesson-card" onclick="toggleDetail('d1',this)">
         <div class="lesson-header">
-          <div class="lesson-icon done"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <div class="lesson-meta">
-            <div class="lesson-title">Lección 1 — Fe y Confianza en Dios</div>
-            <div class="lesson-sub">Vivir por fe y confiar en el plan de Dios</div>
+          <div class="l-icon" id="icon-d1"><i class="ti ti-book" aria-hidden="true"></i></div>
+          <div class="l-meta">
+            <div class="l-title">Lección 1 — Fe y Confianza en Dios</div>
+            <div class="l-sub">Vivir por fe y confiar en el plan de Dios</div>
           </div>
-          <span class="lesson-badge b-done">Completa</span>
+          <span class="l-badge b-inicio" id="badge-d1">Iniciar</span>
         </div>
-        <div class="prog-bar"><div class="prog-fill" style="width:100%"></div></div>
+        <div class="prog-bar"><div class="prog-fill" id="prog-d1" style="width:0%"></div></div>
       </div>
       <div class="lesson-detail" id="d1">
-        <div class="detail-header">
-          <span class="detail-title">Fe y Confianza en Dios</span>
-          <button class="close-btn" onclick="event.stopPropagation();toggleDetail('d1')"><i class="ti ti-x" aria-hidden="true"></i></button>
+        <div class="d-header">
+          <span class="d-title">Fe y Confianza en Dios</span>
+          <button class="close-btn" onclick="event.stopPropagation();closeDetail('d1')"><i class="ti ti-x" aria-hidden="true"></i></button>
         </div>
-        <div class="versiculo-box">
-          <div class="versiculo-texto">"Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."</div>
-          <div class="versiculo-ref">— Hebreos 11:1</div>
+        <div class="vers-box">
+          <div class="vers-txt">"Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."</div>
+          <div class="vers-ref">— Hebreos 11:1</div>
         </div>
-        <p class="preview-label">Vista previa</p>
-        <div class="detail-text">La fe no es entenderlo todo. Es caminar confiando en quien lo entiende todo. En esta lección descubres cómo vivir realmente por fe y cómo confiar en el plan de Dios cuando el camino no está claro.</div>
-        <div class="detail-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;">El libro completo incluye la reflexión profunda, versículos guía y el ejercicio del diario de fe de 3 días.</div>
-        <button class="cta-libro" onclick="window.open('https://app.hotmart.com','_blank')">
-          <i class="ti ti-book" aria-hidden="true"></i> Obtener el libro completo
-        </button>
+        <p class="preview-tag">Vista previa del contenido</p>
+        <div class="d-text">La fe no es entenderlo todo. Es caminar confiando en quien lo entiende todo. En esta lección descubres cómo vivir realmente por fe y cómo confiar en el plan de Dios cuando el camino no está claro.</div>
+        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye la reflexión profunda, versículos guía y el ejercicio del Diario de Fe de 3 días.</div>
+        <div class="d-actions">
+          <button class="btn-iniciar" onclick="iniciarLeccion('d1');event.stopPropagation()">Marcar como iniciada ⭐</button>
+          <button class="btn-hotmart" onclick="window.open('https://hotmart.com','_blank');event.stopPropagation()">Libro completo 📖</button>
+        </div>
       </div>
 
-      <div class="lesson-card" onclick="toggleDetail('d2')">
+      <div class="lesson-card" onclick="toggleDetail('d2',this)" id="card-d2" style="opacity:0.5;pointer-events:none;">
         <div class="lesson-header">
-          <div class="lesson-icon active-icon"><i class="ti ti-pray" aria-hidden="true"></i></div>
-          <div class="lesson-meta">
-            <div class="lesson-title">Lección 2 — Oración y Comunicación</div>
-            <div class="lesson-sub">El poder de hablar con Dios</div>
+          <div class="l-icon" id="icon-d2"><i class="ti ti-lock" aria-hidden="true"></i></div>
+          <div class="l-meta">
+            <div class="l-title">Lección 2 — Oración y Comunicación</div>
+            <div class="l-sub">El poder de hablar con Dios</div>
           </div>
-          <span class="lesson-badge b-active">En progreso</span>
+          <span class="l-badge b-lock" id="badge-d2">Bloqueada</span>
         </div>
-        <div class="prog-bar"><div class="prog-fill" style="width:45%"></div></div>
+        <div class="prog-bar"><div class="prog-fill" id="prog-d2" style="width:0%"></div></div>
       </div>
       <div class="lesson-detail" id="d2">
-        <div class="detail-header">
-          <span class="detail-title">Oración y Comunicación</span>
-          <button class="close-btn" onclick="event.stopPropagation();toggleDetail('d2')"><i class="ti ti-x" aria-hidden="true"></i></button>
+        <div class="d-header">
+          <span class="d-title">Oración y Comunicación</span>
+          <button class="close-btn" onclick="event.stopPropagation();closeDetail('d2')"><i class="ti ti-x" aria-hidden="true"></i></button>
         </div>
-        <div class="versiculo-box">
-          <div class="versiculo-texto">"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego."</div>
-          <div class="versiculo-ref">— Filipenses 4:6</div>
+        <div class="vers-box">
+          <div class="vers-txt">"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego."</div>
+          <div class="vers-ref">— Filipenses 4:6</div>
         </div>
-        <p class="preview-label">Vista previa</p>
-        <div class="detail-text">La oración no cambia a Dios. Te cambia a ti. En esta lección descubres el poder real de la oración y aprendes modelos bíblicos concretos para que tus oraciones sean más profundas y transformadoras.</div>
-        <div class="detail-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;">El libro completo incluye modelos de oración bíblica y ejercicios prácticos para tu vida de oración.</div>
-        <button class="cta-libro" onclick="window.open('https://app.hotmart.com','_blank')">
-          <i class="ti ti-book" aria-hidden="true"></i> Obtener el libro completo
-        </button>
+        <p class="preview-tag">Vista previa del contenido</p>
+        <div class="d-text">La oración no cambia a Dios. Te cambia a ti. En esta lección descubres el poder real de la oración y aprendes modelos bíblicos concretos para que tus oraciones sean más profundas y transformadoras.</div>
+        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye modelos de oración bíblica y ejercicios prácticos para tu vida de oración.</div>
+        <div class="d-actions">
+          <button class="btn-iniciar" onclick="iniciarLeccion('d2');event.stopPropagation()">Marcar como iniciada ⭐</button>
+          <button class="btn-hotmart" onclick="window.open('https://hotmart.com','_blank');event.stopPropagation()">Libro completo 📖</button>
+        </div>
       </div>
 
-      <div class="lesson-card locked">
+      <div class="lesson-card" id="card-d3" style="opacity:0.5;pointer-events:none;">
         <div class="lesson-header">
-          <div class="lesson-icon"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <div class="lesson-meta">
-            <div class="lesson-title">Lección 3 — Crecimiento en Santidad</div>
-            <div class="lesson-sub">Fruto del Espíritu y dominio propio</div>
+          <div class="l-icon" id="icon-d3"><i class="ti ti-lock" aria-hidden="true"></i></div>
+          <div class="l-meta">
+            <div class="l-title">Lección 3 — Crecimiento en Santidad</div>
+            <div class="l-sub">Fruto del Espíritu y dominio propio</div>
           </div>
-          <span class="lesson-badge b-lock">Bloqueada</span>
+          <span class="l-badge b-lock" id="badge-d3">Bloqueada</span>
         </div>
-        <div class="prog-bar"><div class="prog-fill" style="width:0%"></div></div>
+        <div class="prog-bar"><div class="prog-fill" id="prog-d3" style="width:0%"></div></div>
       </div>
     </div>
 
     <!-- HABITOS -->
     <div id="screen-habitos" class="screen">
-      <p class="section-title">Hábitos de hoy</p>
+      <div class="dia-nav">
+        <button class="dia-nav-btn" id="btn-prev" onclick="cambiarDia(-1)" disabled><i class="ti ti-chevron-left" aria-hidden="true"></i></button>
+        <div class="dia-info">
+          <div class="dia-num" id="dia-num">Día 1</div>
+          <div class="dia-sub" id="dia-semana">Semana 1 — Fundamentos de fe</div>
+          <span class="dia-tema-badge" id="dia-tema">Comienza con fe</span>
+        </div>
+        <button class="dia-nav-btn" id="btn-next" onclick="cambiarDia(1)"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
+      </div>
+
+      <div class="vers-dia" id="vers-dia-box">
+        <div class="vers-dia-txt" id="vers-dia-txt"></div>
+        <div class="vers-dia-ref" id="vers-dia-ref"></div>
+      </div>
+
       <div class="habit-card">
-        <div class="habit-day-header">
-          <div>
-            <div class="habit-day-title" id="dia-titulo">Día 8 de 21</div>
-            <div class="habit-day-sub">Semana 2 — Crecimiento interior</div>
-          </div>
-          <span class="nivel-badge" id="dia-tema">Amor</span>
+        <div class="habit-row">
+          <div class="h-check" id="hb1" onclick="toggleHabit('hb1',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
+          <span class="h-text">Oré hoy</span>
+          <span class="h-xp">+10 XP</span>
         </div>
         <div class="habit-row">
-          <div class="habit-check checked" onclick="toggleHabit(this,10)" id="h1"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="habit-text">Oré hoy</span>
-          <span class="xp-pill">+10 XP</span>
+          <div class="h-check" id="hb2" onclick="toggleHabit('hb2',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
+          <span class="h-text" id="h-lectura">Leí el versículo del día</span>
+          <span class="h-xp">+10 XP</span>
         </div>
         <div class="habit-row">
-          <div class="habit-check checked" onclick="toggleHabit(this,10)" id="h2"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="habit-text">Leí 1 Corintios 13:4-7</span>
-          <span class="xp-pill">+10 XP</span>
+          <div class="h-check" id="hb3" onclick="toggleHabit('hb3',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
+          <span class="h-text">Reflexioné en silencio</span>
+          <span class="h-xp">+10 XP</span>
         </div>
         <div class="habit-row">
-          <div class="habit-check checked" onclick="toggleHabit(this,10)" id="h3"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="habit-text">Reflexioné en silencio</span>
-          <span class="xp-pill">+10 XP</span>
+          <div class="h-check" id="hb4" onclick="toggleHabit('hb4',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
+          <span class="h-text">Escribí 3 gracias</span>
+          <span class="h-xp">+10 XP</span>
         </div>
         <div class="habit-row">
-          <div class="habit-check" onclick="toggleHabit(this,10)" id="h4"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="habit-text">Escribí 3 gracias</span>
-          <span class="xp-pill">+10 XP</span>
+          <div class="h-check" id="hb5" onclick="toggleHabit('hb5',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
+          <span class="h-text">Declaré mi afirmación de fe</span>
+          <span class="h-xp">+10 XP</span>
         </div>
-        <div class="habit-row">
-          <div class="habit-check" onclick="toggleHabit(this,10)" id="h5"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="habit-text">Declaré mi afirmación de fe</span>
-          <span class="xp-pill">+10 XP</span>
-        </div>
-        <div class="habit-complete" id="habit-complete-msg">
-          <p>¡Completaste todos tus hábitos de hoy! 🌿 +50 XP extra</p>
+        <div class="complete-banner" id="complete-banner">
+          <p>¡Misión del día completada! 🌿<br>+50 XP extra ganados</p>
         </div>
       </div>
 
-      <div class="habit-card" style="background:#F5F0E8;border:0.5px dashed rgba(0,0,0,0.15);">
-        <div class="versiculo-box" style="background:#fff;">
-          <div class="versiculo-texto">"Elijo amar hoy con el amor que Dios puso en mí."</div>
-          <div class="versiculo-ref">Afirmación del día</div>
-        </div>
+      <div class="afirm-dia">
+        <div class="afirm-dia-label">Afirmación del día</div>
+        <div class="afirm-dia-txt" id="afirm-dia-txt"></div>
+        <div class="afirm-dia-ref" id="afirm-dia-ref"></div>
       </div>
     </div>
 
     <!-- AFIRMACIONES -->
     <div id="screen-afirmaciones" class="screen">
-      <p class="section-title">Tus 21 afirmaciones de fe</p>
-      <div class="card-grid" id="afirm-grid"></div>
+      <p class="sec-title">Tus 21 afirmaciones de fe</p>
+      <div class="afirm-grid" id="afirm-grid"></div>
     </div>
 
     <!-- LOGROS -->
     <div id="screen-logros" class="screen">
-      <p class="section-title">Tus niveles</p>
+      <p class="sec-title">Tus niveles</p>
       <div class="nivel-card">
         <div class="nivel-row">
-          <div class="nivel-icon activo"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div class="nivel-info">
-            <div class="nivel-nombre">Semilla de fe</div>
-            <div class="nivel-req">0 — 999 XP · Nivel actual</div>
+          <div class="n-icon on" id="nv1"><i class="ti ti-star" aria-hidden="true"></i></div>
+          <div class="n-info">
+            <div class="n-name">Semilla de fe</div>
+            <div class="n-req">0 — 999 XP</div>
           </div>
+          <span class="n-xp" id="nv1-label">Nivel actual</span>
         </div>
         <div class="nivel-row">
-          <div class="nivel-icon inactivo"><i class="ti ti-flame" aria-hidden="true"></i></div>
-          <div class="nivel-info">
-            <div class="nivel-nombre">Fe creciente</div>
-            <div class="nivel-req">1000 — 2499 XP</div>
+          <div class="n-icon off" id="nv2"><i class="ti ti-flame" aria-hidden="true"></i></div>
+          <div class="n-info">
+            <div class="n-name">Fe creciente</div>
+            <div class="n-req">1000 — 2499 XP</div>
           </div>
+          <span class="n-xp" id="nv2-label">Bloqueado</span>
         </div>
         <div class="nivel-row">
-          <div class="nivel-icon inactivo"><i class="ti ti-crown" aria-hidden="true"></i></div>
-          <div class="nivel-info">
-            <div class="nivel-nombre">Fe en acción</div>
-            <div class="nivel-req">2500 — 4999 XP</div>
+          <div class="n-icon off" id="nv3"><i class="ti ti-crown" aria-hidden="true"></i></div>
+          <div class="n-info">
+            <div class="n-name">Fe en acción</div>
+            <div class="n-req">2500 — 4999 XP</div>
           </div>
+          <span class="n-xp" id="nv3-label">Bloqueado</span>
         </div>
         <div class="nivel-row">
-          <div class="nivel-icon inactivo"><i class="ti ti-diamond" aria-hidden="true"></i></div>
-          <div class="nivel-info">
-            <div class="nivel-nombre">Guerrera de fe</div>
-            <div class="nivel-req">5000+ XP</div>
+          <div class="n-icon off" id="nv4"><i class="ti ti-diamond" aria-hidden="true"></i></div>
+          <div class="n-info">
+            <div class="n-name">Guerrera de fe</div>
+            <div class="n-req">5000+ XP</div>
           </div>
+          <span class="n-xp" id="nv4-label">Bloqueado</span>
         </div>
       </div>
 
-      <p class="section-title">Tus medallas</p>
+      <p class="sec-title">Tus medallas</p>
       <div class="medallas-grid">
-        <div class="medalla ganada">
+        <div class="medalla" id="med-1">
           <div class="m-icon"><i class="ti ti-star" aria-hidden="true"></i></div>
           <div class="m-name">Primera semilla</div>
-          <div class="m-xp">+100 XP</div>
+          <div class="m-pts">+100 XP</div>
         </div>
-        <div class="medalla ganada">
+        <div class="medalla" id="med-2">
           <div class="m-icon"><i class="ti ti-flame" aria-hidden="true"></i></div>
           <div class="m-name">7 días seguidos</div>
-          <div class="m-xp">+150 XP</div>
+          <div class="m-pts">+150 XP</div>
         </div>
-        <div class="medalla">
+        <div class="medalla" id="med-3">
           <div class="m-icon"><i class="ti ti-trophy" aria-hidden="true"></i></div>
           <div class="m-name">21 días completos</div>
-          <div class="m-xp">+500 XP</div>
+          <div class="m-pts">+500 XP</div>
         </div>
-        <div class="medalla">
+        <div class="medalla" id="med-4">
           <div class="m-icon"><i class="ti ti-book" aria-hidden="true"></i></div>
-          <div class="m-name">Lección completa</div>
-          <div class="m-xp">+200 XP</div>
+          <div class="m-name">Lección iniciada</div>
+          <div class="m-pts">+200 XP</div>
         </div>
-        <div class="medalla">
+        <div class="medalla" id="med-5">
           <div class="m-icon"><i class="ti ti-heart" aria-hidden="true"></i></div>
           <div class="m-name">Fe en acción</div>
-          <div class="m-xp">+300 XP</div>
+          <div class="m-pts">+300 XP</div>
         </div>
-        <div class="medalla">
+        <div class="medalla" id="med-6">
           <div class="m-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
           <div class="m-name">Comunidad</div>
-          <div class="m-xp">+100 XP</div>
+          <div class="m-pts">+100 XP</div>
         </div>
       </div>
     </div>
 
     <!-- PROXIMO -->
     <div id="screen-proximo" class="screen">
-      <p class="section-title">Próximamente para ti</p>
+      <p class="sec-title">Próximamente para ti 🌿</p>
       <div class="coming-card">
         <div class="coming-icon"><i class="ti ti-sun" aria-hidden="true"></i></div>
         <div class="coming-title">Devocional — Sanación emocional</div>
         <div class="coming-sub">7 días para sanar desde adentro con la Palabra de Dios. Reflexiones, ejercicios y oraciones para cada etapa del proceso.</div>
-        <button class="coming-notify" onclick="showToast('¡Te avisaremos cuando esté listo!')">Avísame cuando esté listo</button>
+        <button class="btn-avisar" onclick="showToast('¡Te avisaremos cuando esté listo! 🌿')">Avísame cuando esté listo</button>
       </div>
       <div class="coming-card">
         <div class="coming-icon"><i class="ti ti-notebook" aria-hidden="true"></i></div>
         <div class="coming-title">Diario espiritual interactivo</div>
         <div class="coming-sub">Tu espacio diario de reflexión, gratitud y comunión con Dios. Plantillas guiadas para cada día.</div>
-        <button class="coming-notify" onclick="showToast('¡Te avisaremos cuando esté listo!')">Avísame cuando esté listo</button>
+        <button class="btn-avisar" onclick="showToast('¡Te avisaremos cuando esté listo! 🌿')">Avísame cuando esté listo</button>
       </div>
       <div class="coming-card">
         <div class="coming-icon"><i class="ti ti-calendar" aria-hidden="true"></i></div>
         <div class="coming-title">Agenda con propósito</div>
         <div class="coming-sub">Planifica tu vida desde los principios bíblicos. Mensual, semanal y diaria con espacio para la fe.</div>
-        <button class="coming-notify" onclick="showToast('¡Te avisaremos cuando esté listo!')">Avísame cuando esté listo</button>
+        <button class="btn-avisar" onclick="showToast('¡Te avisaremos cuando esté listo! 🌿')">Avísame cuando esté listo</button>
       </div>
     </div>
 
@@ -448,119 +467,231 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 
   <div class="bottom-nav">
     <button class="nav-item active" onclick="setNav(this,'libro')" aria-label="Inicio">
-      <i class="ti ti-home" aria-hidden="true"></i>
-      <span>Inicio</span>
+      <i class="ti ti-home" aria-hidden="true"></i><span>Inicio</span>
     </button>
     <button class="nav-item" onclick="setNav(this,'habitos')" aria-label="Hábitos">
-      <i class="ti ti-check" aria-hidden="true"></i>
-      <span>Hábitos</span>
+      <i class="ti ti-check" aria-hidden="true"></i><span>Hábitos</span>
     </button>
     <button class="nav-item" onclick="setNav(this,'afirmaciones')" aria-label="Afirmaciones">
-      <i class="ti ti-cards" aria-hidden="true"></i>
-      <span>Fe</span>
+      <i class="ti ti-cards" aria-hidden="true"></i><span>Fe</span>
     </button>
     <button class="nav-item" onclick="setNav(this,'logros')" aria-label="Logros">
-      <i class="ti ti-trophy" aria-hidden="true"></i>
-      <span>Logros</span>
+      <i class="ti ti-trophy" aria-hidden="true"></i><span>Logros</span>
     </button>
-    <button class="nav-item" onclick="setNav(this,'proximo')" aria-label="Próximo">
-      <i class="ti ti-sparkles" aria-hidden="true"></i>
-      <span>Próximo</span>
+    <button class="nav-item" onclick="setNav(this,'proximo')" aria-label="Próximamente">
+      <i class="ti ti-sparkles" aria-hidden="true"></i><span>Próximo</span>
     </button>
   </div>
-
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-const afirmaciones = [
-  {texto:"Mi fe es la certeza de lo que espero",verso:"Hebreos 11:1"},
-  {texto:"Confío en el plan de Dios para mi vida",verso:"Jeremías 29:11"},
-  {texto:"Camino por fe, no por lo que veo",verso:"2 Corintios 5:7"},
-  {texto:"La Palabra de Dios ilumina cada paso",verso:"Salmos 119:105"},
-  {texto:"No temo porque Dios camina conmigo",verso:"Isaías 41:10"},
-  {texto:"El justo por la fe vivirá",verso:"Habacuc 2:4"},
-  {texto:"Dios es mi fuerza y mi refugio",verso:"Salmos 46:1"},
-  {texto:"Mi oración transforma mi corazón",verso:"Filipenses 4:6-7"},
-  {texto:"La paz de Dios guarda mi mente",verso:"Juan 14:27"},
-  {texto:"Presento todo a Dios y recibo su paz",verso:"Filipenses 4:6"},
-  {texto:"En la tormenta Dios me sostiene",verso:"Marcos 4:39"},
-  {texto:"Oro sin cesar y en todo doy gracias",verso:"1 Tes. 5:17-18"},
-  {texto:"Dios escucha mi voz cada mañana",verso:"Salmos 5:3"},
-  {texto:"Mi descanso está en Dios solamente",verso:"Salmos 62:1"},
-  {texto:"Soy hechura de Dios para buenas obras",verso:"Efesios 2:10"},
-  {texto:"El Espíritu me da amor, poder y dominio",verso:"2 Timoteo 1:7"},
-  {texto:"Renuevo mi mente con la Palabra",verso:"Romanos 12:2"},
-  {texto:"Mi fe actúa y está viva hoy",verso:"Santiago 2:17"},
-  {texto:"Todo lo puedo en Cristo que me fortalece",verso:"Filipenses 4:13"},
-  {texto:"Persevero porque Dios comenzó en mí una buena obra",verso:"Filipenses 1:6"},
-  {texto:"La fe viene por oír la Palabra de Dios",verso:"Romanos 10:17"}
+// ── DATOS ──────────────────────────────────────────────
+const dias = [
+  {tema:"Comienza con fe",semana:"Semana 1 — Fundamentos de fe",verso:'"Es, pues, la fe la certeza de lo que se espera."',ref:"Hebreos 11:1",afirm:"Mi fe es la certeza de lo que espero",afirmRef:"Hebreos 11:1",lectura:"Leí Hebreos 11:1"},
+  {tema:"Confía en el plan de Dios",semana:"Semana 1 — Fundamentos de fe",verso:'"Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz."',ref:"Jeremías 29:11",afirm:"Confío en el plan de Dios para mi vida",afirmRef:"Jeremías 29:11",lectura:"Leí Jeremías 29:11"},
+  {tema:"El poder de la oración",semana:"Semana 1 — Fundamentos de fe",verso:'"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios."',ref:"Filipenses 4:6-7",afirm:"Mi oración transforma mi corazón",afirmRef:"Filipenses 4:6-7",lectura:"Leí Filipenses 4:6-7"},
+  {tema:"Vivir por fe, no por vista",semana:"Semana 1 — Fundamentos de fe",verso:'"Porque por fe andamos, no por vista."',ref:"2 Corintios 5:7",afirm:"Camino por fe, no por lo que veo",afirmRef:"2 Corintios 5:7",lectura:"Leí 2 Corintios 5:7"},
+  {tema:"La Palabra como guía",semana:"Semana 1 — Fundamentos de fe",verso:'"Lámpara es a mis pies tu palabra, y lumbrera a mi camino."',ref:"Salmos 119:105",afirm:"La Palabra de Dios ilumina cada paso",afirmRef:"Salmos 119:105",lectura:"Leí Salmos 119:105"},
+  {tema:"Dominio propio",semana:"Semana 1 — Fundamentos de fe",verso:'"Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre, templanza."',ref:"Gálatas 5:22-23",afirm:"El Espíritu me da dominio propio",afirmRef:"Gálatas 5:22-23",lectura:"Leí Gálatas 5:22-23"},
+  {tema:"Descanso y gratitud",semana:"Semana 1 — Fundamentos de fe",verso:'"Jehová es mi pastor; nada me faltará."',ref:"Salmos 23:1",afirm:"Dios es mi pastor y me guía",afirmRef:"Salmos 23:1",lectura:"Leí Salmos 23"},
+  {tema:"Fruto del Espíritu: amor",semana:"Semana 2 — Crecimiento interior",verso:'"El amor es sufrido, es benigno; el amor no tiene envidia."',ref:"1 Corintios 13:4",afirm:"Elijo amar hoy",afirmRef:"1 Corintios 13:4",lectura:"Leí 1 Corintios 13:4-7"},
+  {tema:"Fruto del Espíritu: paz",semana:"Semana 2 — Crecimiento interior",verso:'"La paz os dejo, mi paz os doy; yo no os la doy como el mundo la da."',ref:"Juan 14:27",afirm:"La paz de Dios guarda mi corazón",afirmRef:"Juan 14:27",lectura:"Leí Juan 14:27"},
+  {tema:"Fruto del Espíritu: paciencia",semana:"Semana 2 — Crecimiento interior",verso:'"Sabiendo que la prueba de vuestra fe produce paciencia."',ref:"Santiago 1:3",afirm:"En la espera también crece mi fe",afirmRef:"Santiago 1:3-4",lectura:"Leí Santiago 1:3-4"},
+  {tema:"Identidad en Cristo",semana:"Semana 2 — Crecimiento interior",verso:'"Porque somos hechura suya, creados en Cristo Jesús para buenas obras."',ref:"Efesios 2:10",afirm:"Soy hechura de Dios con propósito",afirmRef:"Efesios 2:10",lectura:"Leí Efesios 2:10"},
+  {tema:"Vencer el miedo",semana:"Semana 2 — Crecimiento interior",verso:'"No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios."',ref:"Isaías 41:10",afirm:"No temo porque Dios está conmigo",afirmRef:"Isaías 41:10",lectura:"Leí Isaías 41:10"},
+  {tema:"Renovar la mente",semana:"Semana 2 — Crecimiento interior",verso:'"No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento."',ref:"Romanos 12:2",afirm:"Renuevo mi mente con la Palabra",afirmRef:"Romanos 12:2",lectura:"Leí Romanos 12:2"},
+  {tema:"Celebra tu avance",semana:"Semana 2 — Crecimiento interior",verso:'"Cantad alegres a Dios, habitantes de toda la tierra."',ref:"Salmos 100:1",afirm:"Doy gracias por cada paso dado",afirmRef:"Salmos 100:1",lectura:"Leí Salmos 100"},
+  {tema:"Actuar con fe",semana:"Semana 3 — Fe en acción",verso:'"Así también la fe, si no tiene obras, es muerta en sí misma."',ref:"Santiago 2:17",afirm:"Mi fe se mueve en acción hoy",afirmRef:"Santiago 2:17",lectura:"Leí Santiago 2:14-17"},
+  {tema:"Propósito de vida",semana:"Semana 3 — Fe en acción",verso:'"Muchos pensamientos hay en el corazón del hombre; mas el consejo de Jehová permanecerá."',ref:"Proverbios 19:21",afirm:"Vivo con propósito cada día",afirmRef:"Proverbios 19:21",lectura:"Leí Proverbios 19:21"},
+  {tema:"Servir a otros",semana:"Semana 3 — Fe en acción",verso:'"El Hijo del Hombre no vino para ser servido, sino para servir."',ref:"Marcos 10:45",afirm:"Sirvo con amor y propósito",afirmRef:"Marcos 10:45",lectura:"Leí Marcos 10:45"},
+  {tema:"Perseverancia",semana:"Semana 3 — Fe en acción",verso:'"Corramos con paciencia la carrera que tenemos por delante."',ref:"Hebreos 12:1",afirm:"Persevero porque Dios me sostiene",afirmRef:"Hebreos 12:1",lectura:"Leí Hebreos 12:1"},
+  {tema:"Oración intercesora",semana:"Semana 3 — Fe en acción",verso:'"Exhorto ante todo, a que se hagan rogativas, oraciones, peticiones y acciones de gracias, por todos los hombres."',ref:"1 Timoteo 2:1",afirm:"Oro por otros con amor",afirmRef:"1 Timoteo 2:1",lectura:"Leí 1 Timoteo 2:1"},
+  {tema:"Gratitud profunda",semana:"Semana 3 — Fe en acción",verso:'"Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros."',ref:"1 Tesalonicenses 5:18",afirm:"Doy gracias en todo momento",afirmRef:"1 Tes. 5:18",lectura:"Leí 1 Tesalonicenses 5:18"},
+  {tema:"Fe que transforma",semana:"Semana 3 — Fe en acción",verso:'"Así que la fe es por el oír, y el oír, por la palabra de Dios."',ref:"Romanos 10:17",afirm:"La fe viene por oír la Palabra de Dios",afirmRef:"Romanos 10:17",lectura:"Leí Romanos 10:17"}
 ];
 
-const hoy = new Date().getDay() % 21;
+// ── ESTADO ─────────────────────────────────────────────
+let estado = JSON.parse(localStorage.getItem('esporfe') || 'null') || {
+  xp: 0,
+  dias: 0,
+  diaActual: 0,
+  habitosPorDia: {},
+  leccionesIniciadas: [],
+  medallas: []
+};
 
-function buildAfirm() {
-  const grid = document.getElementById('afirm-grid');
-  grid.innerHTML = afirmaciones.map((a,i) => `
-    <div class="afirm-card${i===hoy?' hoy':''}">
-      ${i===hoy?'<span class="hoy-badge">Hoy</span>':''}
-      <div class="afirm-text">${a.texto}</div>
-      <div class="afirm-verse">${a.verso}</div>
-      <div class="afirm-deco">🌿</div>
-    </div>
-  `).join('');
+// ── XP Y NIVELES ───────────────────────────────────────
+const niveles = [
+  {min:0,max:999,nombre:"Semilla de fe",num:1},
+  {min:1000,max:2499,nombre:"Fe creciente",num:2},
+  {min:2500,max:4999,nombre:"Fe en acción",num:3},
+  {min:5000,max:99999,nombre:"Guerrera de fe",num:4}
+];
+
+function getNivel(xp) {
+  return niveles.find(n => xp >= n.min && xp <= n.max) || niveles[0];
 }
-buildAfirm();
 
-let xp = 350;
-let habitosHoy = 3;
+function updateUI() {
+  const nv = getNivel(estado.xp);
+  const siguiente = niveles[nv.num] || {min: nv.max+1};
+  const pct = nv.num < 4 ? Math.min(((estado.xp - nv.min) / (siguiente.min - nv.min)) * 100, 100) : 100;
+  document.getElementById('xp-fill').style.width = pct + '%';
+  document.getElementById('xp-label').textContent = estado.xp + ' / ' + (nv.num < 4 ? siguiente.min : '∞') + ' XP';
+  document.getElementById('nivel-label').textContent = 'Nivel ' + nv.num + ' — ' + nv.nombre;
+  document.getElementById('nivel-badge').textContent = nv.nombre;
+  document.getElementById('stat-xp').textContent = estado.xp;
+  document.getElementById('stat-dias').textContent = estado.dias;
+  const hoyChecked = Object.values(estado.habitosPorDia[estado.diaActual] || {}).filter(Boolean).length;
+  document.getElementById('stat-habitos').textContent = hoyChecked;
+  guardar();
+}
 
-function toggleHabit(el, pts) {
-  el.classList.toggle('checked');
-  if(el.classList.contains('checked')) {
-    xp += pts;
-    habitosHoy++;
-    showToast('+' + pts + ' XP ganados');
+function guardar() {
+  localStorage.setItem('esporfe', JSON.stringify(estado));
+}
+
+// ── HÁBITOS ────────────────────────────────────────────
+function renderDia() {
+  const d = dias[estado.diaActual];
+  document.getElementById('dia-num').textContent = 'Día ' + (estado.diaActual + 1) + ' de 21';
+  document.getElementById('dia-semana').textContent = d.semana;
+  document.getElementById('dia-tema').textContent = d.tema;
+  document.getElementById('vers-dia-txt').textContent = d.verso;
+  document.getElementById('vers-dia-ref').textContent = '— ' + d.ref;
+  document.getElementById('afirm-dia-txt').textContent = '"' + d.afirm + '"';
+  document.getElementById('afirm-dia-ref').textContent = d.afirmRef;
+  document.getElementById('h-lectura').textContent = d.lectura;
+  document.getElementById('btn-prev').disabled = estado.diaActual === 0;
+  document.getElementById('btn-next').disabled = estado.diaActual === 20;
+  const hdp = estado.habitosPorDia[estado.diaActual] || {};
+  ['hb1','hb2','hb3','hb4','hb5'].forEach(id => {
+    const el = document.getElementById(id);
+    if(hdp[id]) el.classList.add('on'); else el.classList.remove('on');
+  });
+  const todos = ['hb1','hb2','hb3','hb4','hb5'].every(id => hdp[id]);
+  document.getElementById('complete-banner').classList.toggle('show', todos);
+}
+
+function cambiarDia(dir) {
+  estado.diaActual = Math.max(0, Math.min(20, estado.diaActual + dir));
+  renderDia();
+  updateUI();
+}
+
+function toggleHabit(id, pts) {
+  if(!estado.habitosPorDia[estado.diaActual]) estado.habitosPorDia[estado.diaActual] = {};
+  const hdp = estado.habitosPorDia[estado.diaActual];
+  const el = document.getElementById(id);
+  if(hdp[id]) {
+    hdp[id] = false;
+    el.classList.remove('on');
+    estado.xp = Math.max(0, estado.xp - pts);
   } else {
-    xp -= pts;
-    habitosHoy--;
+    hdp[id] = true;
+    el.classList.add('on');
+    estado.xp += pts;
+    showToast('+' + pts + ' XP ⭐');
   }
-  updateXP();
-  const todos = document.querySelectorAll('.habit-check');
-  const checkedAll = [...todos].every(h => h.classList.contains('checked'));
-  const msg = document.getElementById('habit-complete-msg');
-  if(checkedAll) {
-    msg.classList.add('show');
-    xp += 50;
-    updateXP();
-  } else {
-    msg.classList.remove('show');
+  const todos = ['hb1','hb2','hb3','hb4','hb5'].every(i => hdp[i]);
+  const banner = document.getElementById('complete-banner');
+  if(todos && !hdp['bonus']) {
+    banner.classList.add('show');
+    estado.xp += 50;
+    hdp['bonus'] = true;
+    estado.dias++;
+    showToast('¡Misión completa! +50 XP extra 🌿');
+    checkMedallas();
+  } else if(!todos) {
+    banner.classList.remove('show');
+    if(hdp['bonus']) { estado.xp = Math.max(0, estado.xp - 50); hdp['bonus'] = false; estado.dias = Math.max(0, estado.dias - 1); }
   }
+  updateUI();
+  document.getElementById('stat-habitos').textContent = ['hb1','hb2','hb3','hb4','hb5'].filter(i => hdp[i]).length;
 }
 
-function updateXP() {
-  document.getElementById('xp-stat').textContent = xp;
-  document.getElementById('habitos-stat').textContent = habitosHoy;
-  const pct = Math.min((xp / 1000) * 100, 100);
-  document.getElementById('xp-fill').style.width = Math.round(pct) + '%';
-  document.getElementById('xp-label').textContent = xp + ' / 1000 XP';
+// ── MEDALLAS ───────────────────────────────────────────
+function checkMedallas() {
+  if(!estado.medallas.includes('primera') && estado.dias >= 1) { estado.medallas.push('primera'); ganarMedalla('med-1','Primera semilla',100); }
+  if(!estado.medallas.includes('7dias') && estado.dias >= 7) { estado.medallas.push('7dias'); ganarMedalla('med-2','7 días seguidos',150); }
+  if(!estado.medallas.includes('21dias') && estado.dias >= 21) { estado.medallas.push('21dias'); ganarMedalla('med-3','21 días completos',500); }
 }
 
-function toggleDetail(id) {
+function ganarMedalla(id, nombre, xpBonus) {
+  document.getElementById(id).classList.add('on');
+  estado.xp += xpBonus;
+  showToast('🏆 Medalla: ' + nombre + ' +' + xpBonus + ' XP');
+  updateUI();
+}
+
+function renderMedallas() {
+  if(estado.medallas.includes('primera')) document.getElementById('med-1').classList.add('on');
+  if(estado.medallas.includes('7dias')) document.getElementById('med-2').classList.add('on');
+  if(estado.medallas.includes('21dias')) document.getElementById('med-3').classList.add('on');
+  if(estado.leccionesIniciadas.length > 0) document.getElementById('med-4').classList.add('on');
+}
+
+// ── LECCIONES ──────────────────────────────────────────
+function toggleDetail(id, card) {
   const d = document.getElementById(id);
   const isOpen = d.classList.contains('open');
   document.querySelectorAll('.lesson-detail').forEach(x => x.classList.remove('open'));
   if(!isOpen) d.classList.add('open');
 }
 
+function closeDetail(id) {
+  document.getElementById(id).classList.remove('open');
+}
+
+function iniciarLeccion(id) {
+  const num = parseInt(id.replace('d',''));
+  if(!estado.leccionesIniciadas.includes(id)) {
+    estado.leccionesIniciadas.push(id);
+    estado.xp += 50;
+    showToast('¡Lección iniciada! +50 XP ⭐');
+    document.getElementById('badge-' + id).textContent = 'En progreso';
+    document.getElementById('badge-' + id).className = 'l-badge b-progreso';
+    document.getElementById('icon-' + id).innerHTML = '<i class="ti ti-pray" style="color:#fff"></i>';
+    document.getElementById('icon-' + id).style.background = '#A0714F';
+    document.getElementById('prog-' + id).style.width = '40%';
+    if(!estado.medallas.includes('leccion')) { estado.medallas.push('leccion'); ganarMedalla('med-4','Lección iniciada',200); }
+    const siguiente = 'd' + (num + 1);
+    const sigCard = document.getElementById('card-' + siguiente);
+    if(sigCard) {
+      sigCard.style.opacity = '1';
+      sigCard.style.pointerEvents = 'auto';
+      sigCard.onclick = function(){ toggleDetail(siguiente, this); };
+      document.getElementById('badge-' + siguiente).textContent = 'Iniciar';
+      document.getElementById('badge-' + siguiente).className = 'l-badge b-inicio';
+      document.getElementById('icon-' + siguiente).innerHTML = '<i class="ti ti-book" style="color:#A0714F"></i>';
+    }
+    updateUI();
+  }
+  closeDetail(id);
+}
+
+// ── AFIRMACIONES ───────────────────────────────────────
+function buildAfirm() {
+  const hoy = new Date().getDay() % 21;
+  document.getElementById('afirm-grid').innerHTML = dias.map((d,i) => `
+    <div class="afirm-card${i===hoy?' hoy':''}">
+      ${i===hoy?'<span class="hoy-tag">Hoy</span>':''}
+      <div class="afirm-txt">"${d.afirm}"</div>
+      <div class="afirm-ref">${d.afirmRef}</div>
+      <div class="afirm-deco">🌿</div>
+    </div>
+  `).join('');
+}
+
+// ── NAVEGACIÓN ─────────────────────────────────────────
 function setTab(btn, screen) {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('screen-' + screen).classList.add('active');
-  const screens = ['libro','habitos','afirmaciones','logros','proximo'];
-  document.querySelectorAll('.nav-item').forEach((n,i) => n.classList.toggle('active', screens[i]===screen));
+  syncNav(screen);
 }
 
 function setNav(item, screen) {
@@ -568,10 +699,20 @@ function setNav(item, screen) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   item.classList.add('active');
   document.getElementById('screen-' + screen).classList.add('active');
-  const screens = ['libro','habitos','afirmaciones','logros','proximo'];
-  document.querySelectorAll('.nav-tab').forEach((t,i) => t.classList.toggle('active', screens[i]===screen));
+  syncTab(screen);
 }
 
+function syncNav(screen) {
+  const map = ['libro','habitos','afirmaciones','logros','proximo'];
+  document.querySelectorAll('.nav-item').forEach((n,i) => n.classList.toggle('active', map[i]===screen));
+}
+
+function syncTab(screen) {
+  const map = ['libro','habitos','afirmaciones','logros','proximo'];
+  document.querySelectorAll('.nav-tab').forEach((t,i) => t.classList.toggle('active', map[i]===screen));
+}
+
+// ── TOAST ──────────────────────────────────────────────
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -579,6 +720,11 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 2500);
 }
 
+// ── INIT ───────────────────────────────────────────────
+renderDia();
+buildAfirm();
+renderMedallas();
+updateUI();
 setTimeout(() => document.getElementById('splash').classList.add('hide'), 1800);
 </script>
 </body>
