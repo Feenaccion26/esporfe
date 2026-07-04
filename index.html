@@ -13,48 +13,36 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
 body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;display:flex;justify-content:center;}
 .app{width:100%;max-width:420px;margin:0 auto;background:#F5F0E8;min-height:100vh;display:flex;flex-direction:column;}
-
-/* SPLASH */
 .splash{position:fixed;inset:0;background:#5C3D1E;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;transition:opacity 0.6s;}
 .splash.hide{opacity:0;pointer-events:none;}
 .splash-leaf{font-size:52px;margin-bottom:20px;}
 .splash-brand{font-family:'Playfair Display',serif;font-style:italic;font-size:38px;color:#F5F0E8;margin-bottom:6px;}
 .splash-sub{font-size:12px;color:#A0714F;letter-spacing:0.12em;text-transform:uppercase;}
-
-/* HEADER */
 .header{background:#5C3D1E;padding:18px 18px 16px;flex-shrink:0;}
 .header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
 .brand{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:#F5F0E8;}
 .user-row{display:flex;align-items:center;gap:10px;}
 .avatar{width:40px;height:40px;border-radius:50%;background:#A0714F;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#F5F0E8;flex-shrink:0;}
 .user-info p{font-size:11px;color:rgba(245,240,232,0.6);}
-.user-info h3{font-size:15px;font-weight:500;color:#F5F0E8;font-family:'Playfair Display',serif;}
+.user-info h3{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;color:#F5F0E8;}
 .nivel-badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#A0714F;color:#F5F0E8;margin-top:3px;}
 .xp-wrap{margin-top:12px;}
 .xp-labels{display:flex;justify-content:space-between;margin-bottom:4px;}
 .xp-labels span{font-size:11px;color:rgba(245,240,232,0.7);}
 .xp-bar{height:7px;background:rgba(245,240,232,0.2);border-radius:99px;overflow:hidden;}
 .xp-fill{height:100%;background:#A0714F;border-radius:99px;transition:width 0.5s;}
-
-/* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 14px;}
 .stat{background:#fff;border-radius:12px;padding:10px;text-align:center;border:0.5px solid rgba(0,0,0,0.06);}
 .stat-num{font-size:22px;font-weight:500;color:#A0714F;font-family:'Playfair Display',serif;}
 .stat-label{font-size:10px;color:#999;margin-top:2px;}
-
-/* NAV TABS */
 .nav-tabs{display:flex;gap:6px;padding:0 14px 12px;overflow-x:auto;scrollbar-width:none;}
 .nav-tabs::-webkit-scrollbar{display:none;}
 .nav-tab{font-size:12px;padding:7px 14px;border-radius:99px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;color:#888;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all 0.15s;}
 .nav-tab.active{background:#A0714F;color:#F5F0E8;border-color:transparent;}
-
-/* CONTENT */
 .content{flex:1;padding:0 14px 100px;overflow-y:auto;}
 .screen{display:none;}
 .screen.active{display:block;}
 .sec-title{font-size:13px;font-weight:500;color:#5C3D1E;margin-bottom:10px;}
-
-/* LECCIONES */
 .lesson-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:10px;cursor:pointer;transition:border-color 0.15s;}
 .lesson-card:active{border-color:#A0714F;}
 .lesson-header{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
@@ -66,29 +54,35 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 .l-badge{font-size:10px;padding:3px 8px;border-radius:99px;flex-shrink:0;}
 .b-inicio{background:#F5F0E8;color:#A0714F;}
 .b-progreso{background:#A0714F;color:#fff;}
-.b-completa{background:#8FA89A;color:#fff;}
 .b-lock{background:#f0f0f0;color:#bbb;}
 .prog-bar{height:5px;background:#F5F0E8;border-radius:99px;overflow:hidden;}
 .prog-fill{height:100%;border-radius:99px;background:#A0714F;transition:width 0.5s;}
-
-/* DETALLE LECCION */
 .lesson-detail{display:none;background:#fff;border-radius:14px;border:0.5px solid #A0714F;padding:16px;margin-bottom:10px;}
 .lesson-detail.open{display:block;}
-.d-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.d-title{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#5C3D1E;}
+.d-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.d-title{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:#5C3D1E;}
 .close-btn{width:28px;height:28px;border-radius:50%;border:none;background:#F5F0E8;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .close-btn i{color:#888;font-size:15px;}
 .vers-box{background:#F5F0E8;border-radius:10px;padding:12px;margin-bottom:12px;}
 .vers-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:#5C3D1E;line-height:1.6;}
 .vers-ref{font-size:11px;color:#A0714F;margin-top:4px;}
 .d-text{font-size:13px;color:#555;line-height:1.7;margin-bottom:10px;}
-.preview-tag{font-size:10px;font-weight:500;color:#A0714F;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.d-pregunta{background:#F5F0E8;border-left:3px solid #A0714F;border-radius:0 10px 10px 0;padding:10px 12px;margin-bottom:12px;}
+.d-pregunta p{font-size:12px;color:#5C3D1E;font-style:italic;line-height:1.6;}
+.mision-box{background:#5C3D1E;border-radius:12px;padding:14px;margin-bottom:12px;}
+.mision-titulo{font-size:11px;color:#8FA89A;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.mision-nombre{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#F5F0E8;margin-bottom:10px;}
+.mision-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;}
+.mision-num{font-size:10px;font-weight:500;background:#A0714F;color:#F5F0E8;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.mision-paso{font-size:12px;color:#F5F0E8;line-height:1.5;flex:1;}
+.mision-footer{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
+.mision-tag{font-size:10px;padding:3px 8px;border-radius:99px;background:rgba(245,240,232,0.15);color:#F5F0E8;}
+.mision-xp{font-size:10px;padding:3px 8px;border-radius:99px;background:#A0714F;color:#F5F0E8;}
+.preview-tag{font-size:10px;font-weight:500;color:#A0714F;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;}
 .d-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
 .btn-iniciar{background:#A0714F;color:#F5F0E8;border:none;border-radius:99px;padding:10px 18px;font-size:12px;font-family:'Montserrat',sans-serif;cursor:pointer;flex:1;transition:background 0.15s;}
 .btn-iniciar:hover{background:#8B5E3C;}
 .btn-hotmart{background:#F5F0E8;color:#A0714F;border:0.5px solid #A0714F;border-radius:99px;padding:10px 18px;font-size:12px;font-family:'Montserrat',sans-serif;cursor:pointer;flex:1;}
-
-/* HABITOS */
 .dia-nav{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:12px 14px;margin-bottom:10px;}
 .dia-nav-btn{width:34px;height:34px;border-radius:50%;border:0.5px solid rgba(0,0,0,0.12);background:#F5F0E8;display:flex;align-items:center;justify-content:center;cursor:pointer;}
 .dia-nav-btn i{color:#A0714F;font-size:18px;}
@@ -97,7 +91,6 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 .dia-num{font-size:18px;font-weight:500;color:#5C3D1E;font-family:'Playfair Display',serif;}
 .dia-sub{font-size:11px;color:#888;}
 .dia-tema-badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#A0714F;color:#F5F0E8;margin-top:3px;}
-
 .habit-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:10px;}
 .habit-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:0.5px solid #f5f0e8;}
 .habit-row:last-child{border-bottom:none;padding-bottom:0;}
@@ -107,21 +100,16 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 .h-check.on i{opacity:1;}
 .h-text{font-size:13px;color:#444;flex:1;line-height:1.4;}
 .h-xp{font-size:10px;padding:2px 7px;border-radius:99px;background:#F5F0E8;color:#A0714F;flex-shrink:0;}
-
 .vers-dia{background:#F5F0E8;border-radius:12px;padding:12px;margin-bottom:10px;}
 .vers-dia-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:#5C3D1E;line-height:1.6;}
 .vers-dia-ref{font-size:11px;color:#A0714F;margin-top:4px;}
-
 .afirm-dia{background:#5C3D1E;border-radius:12px;padding:14px;margin-bottom:10px;}
 .afirm-dia-label{font-size:10px;color:#8FA89A;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em;}
 .afirm-dia-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#F5F0E8;line-height:1.55;}
 .afirm-dia-ref{font-size:11px;color:#8FA89A;margin-top:6px;}
-
 .complete-banner{background:#8FA89A;border-radius:12px;padding:14px;text-align:center;margin-top:10px;display:none;}
 .complete-banner.show{display:block;}
 .complete-banner p{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#fff;line-height:1.5;}
-
-/* AFIRMACIONES */
 .afirm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
 .afirm-card{background:#5C3D1E;border-radius:14px;padding:14px;min-height:110px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
 .afirm-card.hoy{border:2px solid #A0714F;}
@@ -129,8 +117,6 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 .afirm-txt{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:#F5F0E8;line-height:1.5;}
 .afirm-ref{font-size:10px;color:#8FA89A;margin-top:6px;}
 .afirm-deco{position:absolute;bottom:-10px;right:-6px;font-size:42px;opacity:0.07;}
-
-/* LOGROS */
 .nivel-card{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:14px;margin-bottom:14px;}
 .nivel-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:0.5px solid #f5f0e8;}
 .nivel-row:last-child{border-bottom:none;}
@@ -143,7 +129,6 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 .n-name{font-size:13px;font-weight:500;color:#333;}
 .n-req{font-size:11px;color:#888;}
 .n-xp{font-size:11px;color:#A0714F;font-weight:500;}
-
 .medallas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .medalla{background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.08);padding:12px 8px;text-align:center;}
 .medalla.on{border-color:#A0714F;background:#fdf9f5;}
@@ -154,37 +139,28 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
 .m-name{font-size:10px;color:#888;line-height:1.3;}
 .medalla.on .m-name{color:#5C3D1E;font-weight:500;}
 .m-pts{font-size:9px;color:#A0714F;margin-top:2px;}
-
-/* PROXIMO */
 .coming-card{background:#fff;border:0.5px dashed rgba(0,0,0,0.15);border-radius:14px;padding:18px;text-align:center;margin-bottom:10px;}
 .coming-icon{width:48px;height:48px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
 .coming-icon i{color:#A0714F;font-size:22px;}
 .coming-title{font-family:'Playfair Display',serif;font-size:15px;color:#333;margin-bottom:5px;}
 .coming-sub{font-size:12px;color:#888;line-height:1.5;}
 .btn-avisar{background:#F5F0E8;border:none;border-radius:99px;padding:8px 16px;font-size:12px;color:#A0714F;cursor:pointer;margin-top:10px;font-family:'Montserrat',sans-serif;}
-
-/* BOTTOM NAV */
 .bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:420px;display:flex;justify-content:space-around;padding:8px 0 14px;background:#fff;border-top:0.5px solid rgba(0,0,0,0.08);z-index:100;}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:0 8px;border:none;background:transparent;}
 .nav-item i{font-size:22px;color:#ccc;transition:color 0.15s;}
 .nav-item span{font-size:9px;color:#ccc;font-family:'Montserrat',sans-serif;transition:color 0.15s;}
 .nav-item.active i,.nav-item.active span{color:#A0714F;}
-
-/* TOAST */
 .toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%) translateY(10px);background:#5C3D1E;color:#F5F0E8;padding:10px 20px;border-radius:99px;font-size:13px;opacity:0;transition:all 0.3s;z-index:200;white-space:nowrap;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
 <body>
-
 <div class="splash" id="splash">
   <div class="splash-leaf">🌿</div>
   <div class="splash-brand">Es por Fe</div>
   <div class="splash-sub">Yanneth Hernández Ramírez</div>
 </div>
-
 <div class="app">
-
   <div class="header">
     <div class="header-top">
       <span class="brand">Es por Fe</span>
@@ -194,7 +170,7 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
       <div class="avatar">YH</div>
       <div class="user-info">
         <p>Bienvenida de nuevo</p>
-        <h3 id="user-name">Yanneth Hernández</h3>
+        <h3>Yanneth Hernández</h3>
       </div>
     </div>
     <div class="xp-wrap">
@@ -205,22 +181,11 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
       <div class="xp-bar"><div class="xp-fill" id="xp-fill" style="width:0%"></div></div>
     </div>
   </div>
-
   <div class="stats-row">
-    <div class="stat">
-      <div class="stat-num" id="stat-dias">0</div>
-      <div class="stat-label">días seguidos</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" id="stat-habitos">0</div>
-      <div class="stat-label">hábitos hoy</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" id="stat-xp">0</div>
-      <div class="stat-label">puntos XP</div>
-    </div>
+    <div class="stat"><div class="stat-num" id="stat-dias">0</div><div class="stat-label">días seguidos</div></div>
+    <div class="stat"><div class="stat-num" id="stat-habitos">0</div><div class="stat-label">hábitos hoy</div></div>
+    <div class="stat"><div class="stat-num" id="stat-xp">0</div><div class="stat-label">puntos XP</div></div>
   </div>
-
   <div class="nav-tabs">
     <div class="nav-tab active" onclick="setTab(this,'libro')">Fe en Acción</div>
     <div class="nav-tab" onclick="setTab(this,'habitos')">Hábitos</div>
@@ -228,14 +193,13 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
     <div class="nav-tab" onclick="setTab(this,'logros')">Logros</div>
     <div class="nav-tab" onclick="setTab(this,'proximo')">Próximamente</div>
   </div>
-
   <div class="content">
 
     <!-- LIBRO -->
     <div id="screen-libro" class="screen active">
       <p class="sec-title">Tu camino de fe</p>
 
-      <div class="lesson-card" onclick="toggleDetail('d1',this)">
+      <div class="lesson-card" onclick="toggleDetail('d1')">
         <div class="lesson-header">
           <div class="l-icon" id="icon-d1"><i class="ti ti-book" aria-hidden="true"></i></div>
           <div class="l-meta">
@@ -255,16 +219,37 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
           <div class="vers-txt">"Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."</div>
           <div class="vers-ref">— Hebreos 11:1</div>
         </div>
-        <p class="preview-tag">Vista previa del contenido</p>
-        <div class="d-text">La fe no es entenderlo todo. Es caminar confiando en quien lo entiende todo. En esta lección descubres cómo vivir realmente por fe y cómo confiar en el plan de Dios cuando el camino no está claro.</div>
-        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye la reflexión profunda, versículos guía y el ejercicio del Diario de Fe de 3 días.</div>
+        <div class="d-text">La fe no es entenderlo todo. Es la decisión de caminar confiando en quien lo entiende todo. En esta lección descubres que vivir por fe no significa ignorar la realidad, sino elegir ver más allá de ella con los ojos del corazón.</div>
+        <div class="d-text">Muchas veces esperamos entender el plan de Dios antes de dar el siguiente paso. Pero la Escritura nos muestra lo contrario: la fe camina primero y la comprensión llega después. Abraham salió sin saber a dónde iba. Y fue precisamente en ese paso dado en fe donde su historia comenzó a transformarse.</div>
+        <div class="d-text">Confiar en el plan de Dios no significa que el camino sea fácil. Significa que no estás sola en él. Que hay una mano que sostiene cada paso que das, incluso cuando no la sientes.</div>
+        <div class="vers-box">
+          <div class="vers-txt">"Porque por fe andamos, no por vista."</div>
+          <div class="vers-ref">— 2 Corintios 5:7</div>
+        </div>
+        <div class="d-pregunta">
+          <p>Reflexiona: ¿En qué área de tu vida estás esperando entender todo antes de dar el siguiente paso? ¿Qué pasaría si dieras ese paso hoy, confiando en que Dios va delante?</p>
+        </div>
+        <p class="preview-tag">Misión de fe — vista previa</p>
+        <div class="mision-box">
+          <div class="mision-titulo">Misión de fe</div>
+          <div class="mision-nombre">El Diario de Confianza</div>
+          <div class="mision-row"><span class="mision-num">1</span><span class="mision-paso">Escribe 3 áreas de tu vida donde sientes incertidumbre hoy</span></div>
+          <div class="mision-row"><span class="mision-num">2</span><span class="mision-paso">Para cada área busca una promesa bíblica y escríbela</span></div>
+          <div class="mision-row"><span class="mision-num">3</span><span class="mision-paso">Toma una pequeña decisión basada en fe — no en miedo</span></div>
+          <div class="mision-footer">
+            <span class="mision-tag">15 minutos</span>
+            <span class="mision-tag">Nivel iniciada</span>
+            <span class="mision-xp">+100 XP en el libro completo</span>
+          </div>
+        </div>
+        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye la misión gamificada completa con espacios de escritura, versículos adicionales y el ejercicio del Diario de Fe de 3 días.</div>
         <div class="d-actions">
-          <button class="btn-iniciar" onclick="iniciarLeccion('d1');event.stopPropagation()">Marcar como iniciada ⭐</button>
-          <button class="btn-hotmart" onclick="window.open('https://hotmart.com','_blank');event.stopPropagation()">Libro completo 📖</button>
+          <button class="btn-iniciar" onclick="iniciarLeccion('d1');event.stopPropagation()">Marcar como iniciada</button>
+          <button class="btn-hotmart" onclick="abrirHotmart();event.stopPropagation()">Libro completo</button>
         </div>
       </div>
 
-      <div class="lesson-card" onclick="toggleDetail('d2',this)" id="card-d2" style="opacity:0.5;pointer-events:none;">
+      <div class="lesson-card" id="card-d2" style="opacity:0.5;pointer-events:none;">
         <div class="lesson-header">
           <div class="l-icon" id="icon-d2"><i class="ti ti-lock" aria-hidden="true"></i></div>
           <div class="l-meta">
@@ -281,15 +266,36 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
           <button class="close-btn" onclick="event.stopPropagation();closeDetail('d2')"><i class="ti ti-x" aria-hidden="true"></i></button>
         </div>
         <div class="vers-box">
-          <div class="vers-txt">"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego."</div>
+          <div class="vers-txt">"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego, con acción de gracias."</div>
           <div class="vers-ref">— Filipenses 4:6</div>
         </div>
-        <p class="preview-tag">Vista previa del contenido</p>
-        <div class="d-text">La oración no cambia a Dios. Te cambia a ti. En esta lección descubres el poder real de la oración y aprendes modelos bíblicos concretos para que tus oraciones sean más profundas y transformadoras.</div>
-        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye modelos de oración bíblica y ejercicios prácticos para tu vida de oración.</div>
+        <div class="d-text">La oración no cambia a Dios. Te cambia a ti. Es el espacio donde tus miedos se convierten en confianza, tus cargas en paz y tu corazón cerrado se abre a lo que Dios quiere hacer en ti y a través de ti.</div>
+        <div class="d-text">Muchas personas oran como si estuvieran presentando un informe ante un jefe. Pero Dios nos invita a algo diferente: una conversación real, con honestidad, con sentimiento, con la certeza de que del otro lado hay alguien que escucha, que entiende y que responde a su tiempo perfecto.</div>
+        <div class="d-text">En esta lección descubrirás modelos bíblicos de oración que transforman la forma en que te comunicas con Dios — no como fórmulas, sino como caminos hacia una intimidad más profunda con Él.</div>
+        <div class="vers-box">
+          <div class="vers-txt">"Clama a mí y yo te responderé, y te enseñaré cosas grandes y ocultas que tú no conoces."</div>
+          <div class="vers-ref">— Jeremías 33:3</div>
+        </div>
+        <div class="d-pregunta">
+          <p>Reflexiona: ¿Cómo describes honestamente tu vida de oración hoy? ¿Qué cambiaría en tu día si comenzaras cada mañana con 5 minutos de conversación real con Dios?</p>
+        </div>
+        <p class="preview-tag">Misión de fe — vista previa</p>
+        <div class="mision-box">
+          <div class="mision-titulo">Misión de fe</div>
+          <div class="mision-nombre">La Guardia de los 5 Minutos</div>
+          <div class="mision-row"><span class="mision-num">1</span><span class="mision-paso">Durante 7 días ora 5 minutos cada mañana antes de mirar el celular</span></div>
+          <div class="mision-row"><span class="mision-num">2</span><span class="mision-paso">Usa el modelo ACAS: Adoración, Confesión, Acción de gracias, Súplica</span></div>
+          <div class="mision-row"><span class="mision-num">3</span><span class="mision-paso">Anota cada día cómo cambió tu actitud después de orar</span></div>
+          <div class="mision-footer">
+            <span class="mision-tag">7 días</span>
+            <span class="mision-tag">5 min diarios</span>
+            <span class="mision-xp">+150 XP en el libro completo</span>
+          </div>
+        </div>
+        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye los modelos bíblicos de oración completos, espacios de escritura diaria y el seguimiento gamificado de los 7 días.</div>
         <div class="d-actions">
-          <button class="btn-iniciar" onclick="iniciarLeccion('d2');event.stopPropagation()">Marcar como iniciada ⭐</button>
-          <button class="btn-hotmart" onclick="window.open('https://hotmart.com','_blank');event.stopPropagation()">Libro completo 📖</button>
+          <button class="btn-iniciar" onclick="iniciarLeccion('d2');event.stopPropagation()">Marcar como iniciada</button>
+          <button class="btn-hotmart" onclick="abrirHotmart();event.stopPropagation()">Libro completo</button>
         </div>
       </div>
 
@@ -304,6 +310,44 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
         </div>
         <div class="prog-bar"><div class="prog-fill" id="prog-d3" style="width:0%"></div></div>
       </div>
+      <div class="lesson-detail" id="d3">
+        <div class="d-header">
+          <span class="d-title">Crecimiento en Santidad</span>
+          <button class="close-btn" onclick="event.stopPropagation();closeDetail('d3')"><i class="ti ti-x" aria-hidden="true"></i></button>
+        </div>
+        <div class="vers-box">
+          <div class="vers-txt">"Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre, templanza."</div>
+          <div class="vers-ref">— Gálatas 5:22-23</div>
+        </div>
+        <div class="d-text">El carácter cristiano no se construye en los momentos fáciles. Se revela en los difíciles. Es fácil ser paciente cuando todo va bien, amar cuando te tratan bien, tener paz cuando no hay tormenta. El verdadero fruto del Espíritu aparece cuando la vida presiona.</div>
+        <div class="d-text">El dominio propio no es control. Es rendición. Es decirle al Espíritu Santo: "Tú eres el dueño de mis reacciones, de mis palabras, de mis decisiones". Es la diferencia entre vivir desde el ego y vivir desde la gracia.</div>
+        <div class="d-text">En esta lección trabajarás los nueve frutos del Espíritu como herramientas prácticas y diarias — no como una lista de reglas, sino como evidencias de una vida transformada desde adentro.</div>
+        <div class="vers-box">
+          <div class="vers-txt">"No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento."</div>
+          <div class="vers-ref">— Romanos 12:2</div>
+        </div>
+        <div class="d-pregunta">
+          <p>Reflexiona: ¿Cuál de los frutos del Espíritu sientes que más necesita crecer en ti ahora mismo? ¿En qué situación concreta de tu vida ves esa necesidad?</p>
+        </div>
+        <p class="preview-tag">Misión de fe — vista previa</p>
+        <div class="mision-box">
+          <div class="mision-titulo">Misión de fe</div>
+          <div class="mision-nombre">El Escudo del Carácter</div>
+          <div class="mision-row"><span class="mision-num">1</span><span class="mision-paso">Elige el fruto del Espíritu que más necesitas cultivar esta semana</span></div>
+          <div class="mision-row"><span class="mision-num">2</span><span class="mision-paso">Identifica 3 situaciones diarias donde puedes practicarlo intencionalmente</span></div>
+          <div class="mision-row"><span class="mision-num">3</span><span class="mision-paso">Al final de cada día evalúa del 1 al 5 cómo lo expresaste y escribe qué aprendiste</span></div>
+          <div class="mision-footer">
+            <span class="mision-tag">7 días</span>
+            <span class="mision-tag">Reflexión diaria</span>
+            <span class="mision-xp">+200 XP en el libro completo</span>
+          </div>
+        </div>
+        <div class="d-text" style="color:#A0714F;font-style:italic;font-family:'Playfair Display',serif;font-size:12px;">El libro completo incluye el seguimiento gamificado de los 9 frutos, espacios de reflexión diaria y el sistema de evaluación de carácter.</div>
+        <div class="d-actions">
+          <button class="btn-iniciar" onclick="iniciarLeccion('d3');event.stopPropagation()">Marcar como iniciada</button>
+          <button class="btn-hotmart" onclick="abrirHotmart();event.stopPropagation()">Libro completo</button>
+        </div>
+      </div>
     </div>
 
     <!-- HABITOS -->
@@ -317,43 +361,18 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
         </div>
         <button class="dia-nav-btn" id="btn-next" onclick="cambiarDia(1)"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
       </div>
-
-      <div class="vers-dia" id="vers-dia-box">
+      <div class="vers-dia">
         <div class="vers-dia-txt" id="vers-dia-txt"></div>
         <div class="vers-dia-ref" id="vers-dia-ref"></div>
       </div>
-
       <div class="habit-card">
-        <div class="habit-row">
-          <div class="h-check" id="hb1" onclick="toggleHabit('hb1',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="h-text">Oré hoy</span>
-          <span class="h-xp">+10 XP</span>
-        </div>
-        <div class="habit-row">
-          <div class="h-check" id="hb2" onclick="toggleHabit('hb2',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="h-text" id="h-lectura">Leí el versículo del día</span>
-          <span class="h-xp">+10 XP</span>
-        </div>
-        <div class="habit-row">
-          <div class="h-check" id="hb3" onclick="toggleHabit('hb3',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="h-text">Reflexioné en silencio</span>
-          <span class="h-xp">+10 XP</span>
-        </div>
-        <div class="habit-row">
-          <div class="h-check" id="hb4" onclick="toggleHabit('hb4',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="h-text">Escribí 3 gracias</span>
-          <span class="h-xp">+10 XP</span>
-        </div>
-        <div class="habit-row">
-          <div class="h-check" id="hb5" onclick="toggleHabit('hb5',10)"><i class="ti ti-check" aria-hidden="true"></i></div>
-          <span class="h-text">Declaré mi afirmación de fe</span>
-          <span class="h-xp">+10 XP</span>
-        </div>
-        <div class="complete-banner" id="complete-banner">
-          <p>¡Misión del día completada! 🌿<br>+50 XP extra ganados</p>
-        </div>
+        <div class="habit-row"><div class="h-check" id="hb1" onclick="toggleHabit('hb1',10)"><i class="ti ti-check" aria-hidden="true"></i></div><span class="h-text">Oré hoy</span><span class="h-xp">+10 XP</span></div>
+        <div class="habit-row"><div class="h-check" id="hb2" onclick="toggleHabit('hb2',10)"><i class="ti ti-check" aria-hidden="true"></i></div><span class="h-text" id="h-lectura">Leí el versículo del día</span><span class="h-xp">+10 XP</span></div>
+        <div class="habit-row"><div class="h-check" id="hb3" onclick="toggleHabit('hb3',10)"><i class="ti ti-check" aria-hidden="true"></i></div><span class="h-text">Reflexioné en silencio</span><span class="h-xp">+10 XP</span></div>
+        <div class="habit-row"><div class="h-check" id="hb4" onclick="toggleHabit('hb4',10)"><i class="ti ti-check" aria-hidden="true"></i></div><span class="h-text">Escribí 3 gracias</span><span class="h-xp">+10 XP</span></div>
+        <div class="habit-row"><div class="h-check" id="hb5" onclick="toggleHabit('hb5',10)"><i class="ti ti-check" aria-hidden="true"></i></div><span class="h-text">Declaré mi afirmación de fe</span><span class="h-xp">+10 XP</span></div>
+        <div class="complete-banner" id="complete-banner"><p>Misión del día completada<br>+50 XP extra ganados</p></div>
       </div>
-
       <div class="afirm-dia">
         <div class="afirm-dia-label">Afirmación del día</div>
         <div class="afirm-dia-txt" id="afirm-dia-txt"></div>
@@ -371,126 +390,63 @@ body{font-family:'Montserrat',sans-serif;background:#E8E0D4;min-height:100vh;dis
     <div id="screen-logros" class="screen">
       <p class="sec-title">Tus niveles</p>
       <div class="nivel-card">
-        <div class="nivel-row">
-          <div class="n-icon on" id="nv1"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div class="n-info">
-            <div class="n-name">Semilla de fe</div>
-            <div class="n-req">0 — 999 XP</div>
-          </div>
-          <span class="n-xp" id="nv1-label">Nivel actual</span>
-        </div>
-        <div class="nivel-row">
-          <div class="n-icon off" id="nv2"><i class="ti ti-flame" aria-hidden="true"></i></div>
-          <div class="n-info">
-            <div class="n-name">Fe creciente</div>
-            <div class="n-req">1000 — 2499 XP</div>
-          </div>
-          <span class="n-xp" id="nv2-label">Bloqueado</span>
-        </div>
-        <div class="nivel-row">
-          <div class="n-icon off" id="nv3"><i class="ti ti-crown" aria-hidden="true"></i></div>
-          <div class="n-info">
-            <div class="n-name">Fe en acción</div>
-            <div class="n-req">2500 — 4999 XP</div>
-          </div>
-          <span class="n-xp" id="nv3-label">Bloqueado</span>
-        </div>
-        <div class="nivel-row">
-          <div class="n-icon off" id="nv4"><i class="ti ti-diamond" aria-hidden="true"></i></div>
-          <div class="n-info">
-            <div class="n-name">Guerrera de fe</div>
-            <div class="n-req">5000+ XP</div>
-          </div>
-          <span class="n-xp" id="nv4-label">Bloqueado</span>
-        </div>
+        <div class="nivel-row"><div class="n-icon on"><i class="ti ti-star" aria-hidden="true"></i></div><div class="n-info"><div class="n-name">Semilla de fe</div><div class="n-req">0 — 999 XP</div></div><span class="n-xp">Nivel actual</span></div>
+        <div class="nivel-row"><div class="n-icon off" id="nv2"><i class="ti ti-flame" aria-hidden="true"></i></div><div class="n-info"><div class="n-name">Fe creciente</div><div class="n-req">1000 — 2499 XP</div></div><span class="n-xp" id="nv2-label">Bloqueado</span></div>
+        <div class="nivel-row"><div class="n-icon off" id="nv3"><i class="ti ti-crown" aria-hidden="true"></i></div><div class="n-info"><div class="n-name">Fe en acción</div><div class="n-req">2500 — 4999 XP</div></div><span class="n-xp" id="nv3-label">Bloqueado</span></div>
+        <div class="nivel-row"><div class="n-icon off" id="nv4"><i class="ti ti-diamond" aria-hidden="true"></i></div><div class="n-info"><div class="n-name">Guerrera de fe</div><div class="n-req">5000+ XP</div></div><span class="n-xp" id="nv4-label">Bloqueado</span></div>
       </div>
-
       <p class="sec-title">Tus medallas</p>
       <div class="medallas-grid">
-        <div class="medalla" id="med-1">
-          <div class="m-icon"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div class="m-name">Primera semilla</div>
-          <div class="m-pts">+100 XP</div>
-        </div>
-        <div class="medalla" id="med-2">
-          <div class="m-icon"><i class="ti ti-flame" aria-hidden="true"></i></div>
-          <div class="m-name">7 días seguidos</div>
-          <div class="m-pts">+150 XP</div>
-        </div>
-        <div class="medalla" id="med-3">
-          <div class="m-icon"><i class="ti ti-trophy" aria-hidden="true"></i></div>
-          <div class="m-name">21 días completos</div>
-          <div class="m-pts">+500 XP</div>
-        </div>
-        <div class="medalla" id="med-4">
-          <div class="m-icon"><i class="ti ti-book" aria-hidden="true"></i></div>
-          <div class="m-name">Lección iniciada</div>
-          <div class="m-pts">+200 XP</div>
-        </div>
-        <div class="medalla" id="med-5">
-          <div class="m-icon"><i class="ti ti-heart" aria-hidden="true"></i></div>
-          <div class="m-name">Fe en acción</div>
-          <div class="m-pts">+300 XP</div>
-        </div>
-        <div class="medalla" id="med-6">
-          <div class="m-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
-          <div class="m-name">Comunidad</div>
-          <div class="m-pts">+100 XP</div>
-        </div>
+        <div class="medalla" id="med-1"><div class="m-icon"><i class="ti ti-star" aria-hidden="true"></i></div><div class="m-name">Primera semilla</div><div class="m-pts">+100 XP</div></div>
+        <div class="medalla" id="med-2"><div class="m-icon"><i class="ti ti-flame" aria-hidden="true"></i></div><div class="m-name">7 días seguidos</div><div class="m-pts">+150 XP</div></div>
+        <div class="medalla" id="med-3"><div class="m-icon"><i class="ti ti-trophy" aria-hidden="true"></i></div><div class="m-name">21 días completos</div><div class="m-pts">+500 XP</div></div>
+        <div class="medalla" id="med-4"><div class="m-icon"><i class="ti ti-book" aria-hidden="true"></i></div><div class="m-name">Lección iniciada</div><div class="m-pts">+200 XP</div></div>
+        <div class="medalla" id="med-5"><div class="m-icon"><i class="ti ti-heart" aria-hidden="true"></i></div><div class="m-name">Fe en acción</div><div class="m-pts">+300 XP</div></div>
+        <div class="medalla" id="med-6"><div class="m-icon"><i class="ti ti-users" aria-hidden="true"></i></div><div class="m-name">Comunidad</div><div class="m-pts">+100 XP</div></div>
       </div>
     </div>
 
     <!-- PROXIMO -->
     <div id="screen-proximo" class="screen">
-      <p class="sec-title">Próximamente para ti 🌿</p>
+      <p class="sec-title">Próximamente para ti</p>
       <div class="coming-card">
         <div class="coming-icon"><i class="ti ti-sun" aria-hidden="true"></i></div>
         <div class="coming-title">Devocional — Sanación emocional</div>
-        <div class="coming-sub">7 días para sanar desde adentro con la Palabra de Dios. Reflexiones, ejercicios y oraciones para cada etapa del proceso.</div>
-        <button class="btn-avisar" onclick="showToast('¡Te avisaremos cuando esté listo! 🌿')">Avísame cuando esté listo</button>
+        <div class="coming-sub">7 días para sanar desde adentro con la Palabra de Dios. Reflexiones, misiones gamificadas y oraciones para cada etapa del proceso.</div>
+        <button class="btn-avisar" onclick="showToast('Te avisaremos cuando esté listo')">Avísame cuando esté listo</button>
       </div>
       <div class="coming-card">
         <div class="coming-icon"><i class="ti ti-notebook" aria-hidden="true"></i></div>
         <div class="coming-title">Diario espiritual interactivo</div>
         <div class="coming-sub">Tu espacio diario de reflexión, gratitud y comunión con Dios. Plantillas guiadas para cada día.</div>
-        <button class="btn-avisar" onclick="showToast('¡Te avisaremos cuando esté listo! 🌿')">Avísame cuando esté listo</button>
+        <button class="btn-avisar" onclick="showToast('Te avisaremos cuando esté listo')">Avísame cuando esté listo</button>
       </div>
       <div class="coming-card">
         <div class="coming-icon"><i class="ti ti-calendar" aria-hidden="true"></i></div>
         <div class="coming-title">Agenda con propósito</div>
         <div class="coming-sub">Planifica tu vida desde los principios bíblicos. Mensual, semanal y diaria con espacio para la fe.</div>
-        <button class="btn-avisar" onclick="showToast('¡Te avisaremos cuando esté listo! 🌿')">Avísame cuando esté listo</button>
+        <button class="btn-avisar" onclick="showToast('Te avisaremos cuando esté listo')">Avísame cuando esté listo</button>
       </div>
     </div>
 
   </div>
 
   <div class="bottom-nav">
-    <button class="nav-item active" onclick="setNav(this,'libro')" aria-label="Inicio">
-      <i class="ti ti-home" aria-hidden="true"></i><span>Inicio</span>
-    </button>
-    <button class="nav-item" onclick="setNav(this,'habitos')" aria-label="Hábitos">
-      <i class="ti ti-check" aria-hidden="true"></i><span>Hábitos</span>
-    </button>
-    <button class="nav-item" onclick="setNav(this,'afirmaciones')" aria-label="Afirmaciones">
-      <i class="ti ti-cards" aria-hidden="true"></i><span>Fe</span>
-    </button>
-    <button class="nav-item" onclick="setNav(this,'logros')" aria-label="Logros">
-      <i class="ti ti-trophy" aria-hidden="true"></i><span>Logros</span>
-    </button>
-    <button class="nav-item" onclick="setNav(this,'proximo')" aria-label="Próximamente">
-      <i class="ti ti-sparkles" aria-hidden="true"></i><span>Próximo</span>
-    </button>
+    <button class="nav-item active" onclick="setNav(this,'libro')" aria-label="Inicio"><i class="ti ti-home" aria-hidden="true"></i><span>Inicio</span></button>
+    <button class="nav-item" onclick="setNav(this,'habitos')" aria-label="Hábitos"><i class="ti ti-check" aria-hidden="true"></i><span>Hábitos</span></button>
+    <button class="nav-item" onclick="setNav(this,'afirmaciones')" aria-label="Afirmaciones"><i class="ti ti-cards" aria-hidden="true"></i><span>Fe</span></button>
+    <button class="nav-item" onclick="setNav(this,'logros')" aria-label="Logros"><i class="ti ti-trophy" aria-hidden="true"></i><span>Logros</span></button>
+    <button class="nav-item" onclick="setNav(this,'proximo')" aria-label="Próximamente"><i class="ti ti-sparkles" aria-hidden="true"></i><span>Próximo</span></button>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
 
 <script>
-// ── DATOS ──────────────────────────────────────────────
-const dias = [
+const HOTMART='https://jhernandezra.hotmart.host/fe-viva-en-accion-f28d7e0f-52d5-485b-916e-bcabe6a0397e';
+function abrirHotmart(){window.open(HOTMART,'_blank');}
+const dias=[
   {tema:"Comienza con fe",semana:"Semana 1 — Fundamentos de fe",verso:'"Es, pues, la fe la certeza de lo que se espera."',ref:"Hebreos 11:1",afirm:"Mi fe es la certeza de lo que espero",afirmRef:"Hebreos 11:1",lectura:"Leí Hebreos 11:1"},
-  {tema:"Confía en el plan de Dios",semana:"Semana 1 — Fundamentos de fe",verso:'"Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz."',ref:"Jeremías 29:11",afirm:"Confío en el plan de Dios para mi vida",afirmRef:"Jeremías 29:11",lectura:"Leí Jeremías 29:11"},
+  {tema:"Confía en el plan de Dios",semana:"Semana 1 — Fundamentos de fe",verso:'"Porque yo sé los pensamientos que tengo acerca de vosotros, pensamientos de paz."',ref:"Jeremías 29:11",afirm:"Confío en el plan de Dios para mi vida",afirmRef:"Jeremías 29:11",lectura:"Leí Jeremías 29:11"},
   {tema:"El poder de la oración",semana:"Semana 1 — Fundamentos de fe",verso:'"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios."',ref:"Filipenses 4:6-7",afirm:"Mi oración transforma mi corazón",afirmRef:"Filipenses 4:6-7",lectura:"Leí Filipenses 4:6-7"},
   {tema:"Vivir por fe, no por vista",semana:"Semana 1 — Fundamentos de fe",verso:'"Porque por fe andamos, no por vista."',ref:"2 Corintios 5:7",afirm:"Camino por fe, no por lo que veo",afirmRef:"2 Corintios 5:7",lectura:"Leí 2 Corintios 5:7"},
   {tema:"La Palabra como guía",semana:"Semana 1 — Fundamentos de fe",verso:'"Lámpara es a mis pies tu palabra, y lumbrera a mi camino."',ref:"Salmos 119:105",afirm:"La Palabra de Dios ilumina cada paso",afirmRef:"Salmos 119:105",lectura:"Leí Salmos 119:105"},
@@ -507,225 +463,124 @@ const dias = [
   {tema:"Propósito de vida",semana:"Semana 3 — Fe en acción",verso:'"Muchos pensamientos hay en el corazón del hombre; mas el consejo de Jehová permanecerá."',ref:"Proverbios 19:21",afirm:"Vivo con propósito cada día",afirmRef:"Proverbios 19:21",lectura:"Leí Proverbios 19:21"},
   {tema:"Servir a otros",semana:"Semana 3 — Fe en acción",verso:'"El Hijo del Hombre no vino para ser servido, sino para servir."',ref:"Marcos 10:45",afirm:"Sirvo con amor y propósito",afirmRef:"Marcos 10:45",lectura:"Leí Marcos 10:45"},
   {tema:"Perseverancia",semana:"Semana 3 — Fe en acción",verso:'"Corramos con paciencia la carrera que tenemos por delante."',ref:"Hebreos 12:1",afirm:"Persevero porque Dios me sostiene",afirmRef:"Hebreos 12:1",lectura:"Leí Hebreos 12:1"},
-  {tema:"Oración intercesora",semana:"Semana 3 — Fe en acción",verso:'"Exhorto ante todo, a que se hagan rogativas, oraciones, peticiones y acciones de gracias, por todos los hombres."',ref:"1 Timoteo 2:1",afirm:"Oro por otros con amor",afirmRef:"1 Timoteo 2:1",lectura:"Leí 1 Timoteo 2:1"},
+  {tema:"Oración intercesora",semana:"Semana 3 — Fe en acción",verso:'"Exhorto ante todo, a que se hagan rogativas, oraciones, peticiones y acciones de gracias."',ref:"1 Timoteo 2:1",afirm:"Oro por otros con amor",afirmRef:"1 Timoteo 2:1",lectura:"Leí 1 Timoteo 2:1"},
   {tema:"Gratitud profunda",semana:"Semana 3 — Fe en acción",verso:'"Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros."',ref:"1 Tesalonicenses 5:18",afirm:"Doy gracias en todo momento",afirmRef:"1 Tes. 5:18",lectura:"Leí 1 Tesalonicenses 5:18"},
   {tema:"Fe que transforma",semana:"Semana 3 — Fe en acción",verso:'"Así que la fe es por el oír, y el oír, por la palabra de Dios."',ref:"Romanos 10:17",afirm:"La fe viene por oír la Palabra de Dios",afirmRef:"Romanos 10:17",lectura:"Leí Romanos 10:17"}
 ];
-
-// ── ESTADO ─────────────────────────────────────────────
-let estado = JSON.parse(localStorage.getItem('esporfe') || 'null') || {
-  xp: 0,
-  dias: 0,
-  diaActual: 0,
-  habitosPorDia: {},
-  leccionesIniciadas: [],
-  medallas: []
-};
-
-// ── XP Y NIVELES ───────────────────────────────────────
-const niveles = [
-  {min:0,max:999,nombre:"Semilla de fe",num:1},
-  {min:1000,max:2499,nombre:"Fe creciente",num:2},
-  {min:2500,max:4999,nombre:"Fe en acción",num:3},
-  {min:5000,max:99999,nombre:"Guerrera de fe",num:4}
-];
-
-function getNivel(xp) {
-  return niveles.find(n => xp >= n.min && xp <= n.max) || niveles[0];
+let estado=JSON.parse(localStorage.getItem('esporfe')||'null')||{xp:0,dias:0,diaActual:0,habitosPorDia:{},leccionesIniciadas:[],medallas:[]};
+const niveles=[{min:0,max:999,nombre:"Semilla de fe",num:1},{min:1000,max:2499,nombre:"Fe creciente",num:2},{min:2500,max:4999,nombre:"Fe en acción",num:3},{min:5000,max:99999,nombre:"Guerrera de fe",num:4}];
+function getNivel(xp){return niveles.find(n=>xp>=n.min&&xp<=n.max)||niveles[0];}
+function updateUI(){
+  const nv=getNivel(estado.xp);
+  const sig=niveles[nv.num]||{min:nv.max+1};
+  const pct=nv.num<4?Math.min(((estado.xp-nv.min)/(sig.min-nv.min))*100,100):100;
+  document.getElementById('xp-fill').style.width=Math.round(pct)+'%';
+  document.getElementById('xp-label').textContent=estado.xp+' / '+(nv.num<4?sig.min:'∞')+' XP';
+  document.getElementById('nivel-label').textContent='Nivel '+nv.num+' — '+nv.nombre;
+  document.getElementById('nivel-badge').textContent=nv.nombre;
+  document.getElementById('stat-xp').textContent=estado.xp;
+  document.getElementById('stat-dias').textContent=estado.dias;
+  const hdp=estado.habitosPorDia[estado.diaActual]||{};
+  document.getElementById('stat-habitos').textContent=['hb1','hb2','hb3','hb4','hb5'].filter(i=>hdp[i]).length;
+  localStorage.setItem('esporfe',JSON.stringify(estado));
 }
-
-function updateUI() {
-  const nv = getNivel(estado.xp);
-  const siguiente = niveles[nv.num] || {min: nv.max+1};
-  const pct = nv.num < 4 ? Math.min(((estado.xp - nv.min) / (siguiente.min - nv.min)) * 100, 100) : 100;
-  document.getElementById('xp-fill').style.width = pct + '%';
-  document.getElementById('xp-label').textContent = estado.xp + ' / ' + (nv.num < 4 ? siguiente.min : '∞') + ' XP';
-  document.getElementById('nivel-label').textContent = 'Nivel ' + nv.num + ' — ' + nv.nombre;
-  document.getElementById('nivel-badge').textContent = nv.nombre;
-  document.getElementById('stat-xp').textContent = estado.xp;
-  document.getElementById('stat-dias').textContent = estado.dias;
-  const hoyChecked = Object.values(estado.habitosPorDia[estado.diaActual] || {}).filter(Boolean).length;
-  document.getElementById('stat-habitos').textContent = hoyChecked;
-  guardar();
-}
-
-function guardar() {
-  localStorage.setItem('esporfe', JSON.stringify(estado));
-}
-
-// ── HÁBITOS ────────────────────────────────────────────
-function renderDia() {
-  const d = dias[estado.diaActual];
-  document.getElementById('dia-num').textContent = 'Día ' + (estado.diaActual + 1) + ' de 21';
-  document.getElementById('dia-semana').textContent = d.semana;
-  document.getElementById('dia-tema').textContent = d.tema;
-  document.getElementById('vers-dia-txt').textContent = d.verso;
-  document.getElementById('vers-dia-ref').textContent = '— ' + d.ref;
-  document.getElementById('afirm-dia-txt').textContent = '"' + d.afirm + '"';
-  document.getElementById('afirm-dia-ref').textContent = d.afirmRef;
-  document.getElementById('h-lectura').textContent = d.lectura;
-  document.getElementById('btn-prev').disabled = estado.diaActual === 0;
-  document.getElementById('btn-next').disabled = estado.diaActual === 20;
-  const hdp = estado.habitosPorDia[estado.diaActual] || {};
-  ['hb1','hb2','hb3','hb4','hb5'].forEach(id => {
-    const el = document.getElementById(id);
-    if(hdp[id]) el.classList.add('on'); else el.classList.remove('on');
+function renderDia(){
+  const d=dias[estado.diaActual];
+  document.getElementById('dia-num').textContent='Día '+(estado.diaActual+1)+' de 21';
+  document.getElementById('dia-semana').textContent=d.semana;
+  document.getElementById('dia-tema').textContent=d.tema;
+  document.getElementById('vers-dia-txt').textContent=d.verso;
+  document.getElementById('vers-dia-ref').textContent='— '+d.ref;
+  document.getElementById('afirm-dia-txt').textContent='"'+d.afirm+'"';
+  document.getElementById('afirm-dia-ref').textContent=d.afirmRef;
+  document.getElementById('h-lectura').textContent=d.lectura;
+  document.getElementById('btn-prev').disabled=estado.diaActual===0;
+  document.getElementById('btn-next').disabled=estado.diaActual===20;
+  const hdp=estado.habitosPorDia[estado.diaActual]||{};
+  ['hb1','hb2','hb3','hb4','hb5'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(hdp[id])el.classList.add('on');else el.classList.remove('on');
   });
-  const todos = ['hb1','hb2','hb3','hb4','hb5'].every(id => hdp[id]);
-  document.getElementById('complete-banner').classList.toggle('show', todos);
+  document.getElementById('complete-banner').classList.toggle('show',['hb1','hb2','hb3','hb4','hb5'].every(id=>hdp[id]));
 }
-
-function cambiarDia(dir) {
-  estado.diaActual = Math.max(0, Math.min(20, estado.diaActual + dir));
-  renderDia();
+function cambiarDia(dir){estado.diaActual=Math.max(0,Math.min(20,estado.diaActual+dir));renderDia();updateUI();}
+function toggleHabit(id,pts){
+  if(!estado.habitosPorDia[estado.diaActual])estado.habitosPorDia[estado.diaActual]={};
+  const hdp=estado.habitosPorDia[estado.diaActual];
+  const el=document.getElementById(id);
+  if(hdp[id]){hdp[id]=false;el.classList.remove('on');estado.xp=Math.max(0,estado.xp-pts);}
+  else{hdp[id]=true;el.classList.add('on');estado.xp+=pts;showToast('+'+pts+' XP');}
+  const todos=['hb1','hb2','hb3','hb4','hb5'].every(i=>hdp[i]);
+  const banner=document.getElementById('complete-banner');
+  if(todos&&!hdp['bonus']){banner.classList.add('show');estado.xp+=50;hdp['bonus']=true;estado.dias++;showToast('Mision completa +50 XP');checkMedallas();}
+  else if(!todos){banner.classList.remove('show');if(hdp['bonus']){estado.xp=Math.max(0,estado.xp-50);hdp['bonus']=false;estado.dias=Math.max(0,estado.dias-1);}}
   updateUI();
+  document.getElementById('stat-habitos').textContent=['hb1','hb2','hb3','hb4','hb5'].filter(i=>hdp[i]).length;
 }
-
-function toggleHabit(id, pts) {
-  if(!estado.habitosPorDia[estado.diaActual]) estado.habitosPorDia[estado.diaActual] = {};
-  const hdp = estado.habitosPorDia[estado.diaActual];
-  const el = document.getElementById(id);
-  if(hdp[id]) {
-    hdp[id] = false;
-    el.classList.remove('on');
-    estado.xp = Math.max(0, estado.xp - pts);
-  } else {
-    hdp[id] = true;
-    el.classList.add('on');
-    estado.xp += pts;
-    showToast('+' + pts + ' XP ⭐');
-  }
-  const todos = ['hb1','hb2','hb3','hb4','hb5'].every(i => hdp[i]);
-  const banner = document.getElementById('complete-banner');
-  if(todos && !hdp['bonus']) {
-    banner.classList.add('show');
-    estado.xp += 50;
-    hdp['bonus'] = true;
-    estado.dias++;
-    showToast('¡Misión completa! +50 XP extra 🌿');
-    checkMedallas();
-  } else if(!todos) {
-    banner.classList.remove('show');
-    if(hdp['bonus']) { estado.xp = Math.max(0, estado.xp - 50); hdp['bonus'] = false; estado.dias = Math.max(0, estado.dias - 1); }
-  }
-  updateUI();
-  document.getElementById('stat-habitos').textContent = ['hb1','hb2','hb3','hb4','hb5'].filter(i => hdp[i]).length;
+function checkMedallas(){
+  if(!estado.medallas.includes('primera')&&estado.dias>=1){estado.medallas.push('primera');ganarMedalla('med-1','Primera semilla',100);}
+  if(!estado.medallas.includes('7dias')&&estado.dias>=7){estado.medallas.push('7dias');ganarMedalla('med-2','7 dias seguidos',150);}
+  if(!estado.medallas.includes('21dias')&&estado.dias>=21){estado.medallas.push('21dias');ganarMedalla('med-3','21 dias completos',500);}
 }
-
-// ── MEDALLAS ───────────────────────────────────────────
-function checkMedallas() {
-  if(!estado.medallas.includes('primera') && estado.dias >= 1) { estado.medallas.push('primera'); ganarMedalla('med-1','Primera semilla',100); }
-  if(!estado.medallas.includes('7dias') && estado.dias >= 7) { estado.medallas.push('7dias'); ganarMedalla('med-2','7 días seguidos',150); }
-  if(!estado.medallas.includes('21dias') && estado.dias >= 21) { estado.medallas.push('21dias'); ganarMedalla('med-3','21 días completos',500); }
+function ganarMedalla(id,nombre,xpBonus){document.getElementById(id).classList.add('on');estado.xp+=xpBonus;showToast('Medalla: '+nombre+' +'+xpBonus+' XP');updateUI();}
+function renderMedallas(){
+  if(estado.medallas.includes('primera'))document.getElementById('med-1').classList.add('on');
+  if(estado.medallas.includes('7dias'))document.getElementById('med-2').classList.add('on');
+  if(estado.medallas.includes('21dias'))document.getElementById('med-3').classList.add('on');
+  if(estado.leccionesIniciadas.length>0)document.getElementById('med-4').classList.add('on');
 }
-
-function ganarMedalla(id, nombre, xpBonus) {
-  document.getElementById(id).classList.add('on');
-  estado.xp += xpBonus;
-  showToast('🏆 Medalla: ' + nombre + ' +' + xpBonus + ' XP');
-  updateUI();
+function toggleDetail(id){
+  const d=document.getElementById(id);
+  const open=d.classList.contains('open');
+  document.querySelectorAll('.lesson-detail').forEach(x=>x.classList.remove('open'));
+  if(!open)d.classList.add('open');
 }
-
-function renderMedallas() {
-  if(estado.medallas.includes('primera')) document.getElementById('med-1').classList.add('on');
-  if(estado.medallas.includes('7dias')) document.getElementById('med-2').classList.add('on');
-  if(estado.medallas.includes('21dias')) document.getElementById('med-3').classList.add('on');
-  if(estado.leccionesIniciadas.length > 0) document.getElementById('med-4').classList.add('on');
-}
-
-// ── LECCIONES ──────────────────────────────────────────
-function toggleDetail(id, card) {
-  const d = document.getElementById(id);
-  const isOpen = d.classList.contains('open');
-  document.querySelectorAll('.lesson-detail').forEach(x => x.classList.remove('open'));
-  if(!isOpen) d.classList.add('open');
-}
-
-function closeDetail(id) {
-  document.getElementById(id).classList.remove('open');
-}
-
-function iniciarLeccion(id) {
-  const num = parseInt(id.replace('d',''));
-  if(!estado.leccionesIniciadas.includes(id)) {
-    estado.leccionesIniciadas.push(id);
-    estado.xp += 50;
-    showToast('¡Lección iniciada! +50 XP ⭐');
-    document.getElementById('badge-' + id).textContent = 'En progreso';
-    document.getElementById('badge-' + id).className = 'l-badge b-progreso';
-    document.getElementById('icon-' + id).innerHTML = '<i class="ti ti-pray" style="color:#fff"></i>';
-    document.getElementById('icon-' + id).style.background = '#A0714F';
-    document.getElementById('prog-' + id).style.width = '40%';
-    if(!estado.medallas.includes('leccion')) { estado.medallas.push('leccion'); ganarMedalla('med-4','Lección iniciada',200); }
-    const siguiente = 'd' + (num + 1);
-    const sigCard = document.getElementById('card-' + siguiente);
-    if(sigCard) {
-      sigCard.style.opacity = '1';
-      sigCard.style.pointerEvents = 'auto';
-      sigCard.onclick = function(){ toggleDetail(siguiente, this); };
-      document.getElementById('badge-' + siguiente).textContent = 'Iniciar';
-      document.getElementById('badge-' + siguiente).className = 'l-badge b-inicio';
-      document.getElementById('icon-' + siguiente).innerHTML = '<i class="ti ti-book" style="color:#A0714F"></i>';
-    }
+function closeDetail(id){document.getElementById(id).classList.remove('open');}
+function iniciarLeccion(id){
+  const num=parseInt(id.replace('d',''));
+  if(!estado.leccionesIniciadas.includes(id)){
+    estado.leccionesIniciadas.push(id);estado.xp+=50;showToast('Leccion iniciada +50 XP');
+    document.getElementById('badge-'+id).textContent='En progreso';
+    document.getElementById('badge-'+id).className='l-badge b-progreso';
+    document.getElementById('icon-'+id).innerHTML='<i class="ti ti-pray" style="color:#fff"></i>';
+    document.getElementById('icon-'+id).style.background='#A0714F';
+    document.getElementById('prog-'+id).style.width='40%';
+    if(!estado.medallas.includes('leccion')){estado.medallas.push('leccion');ganarMedalla('med-4','Leccion iniciada',200);}
+    const sig='d'+(num+1);const sigCard=document.getElementById('card-'+sig);
+    if(sigCard){sigCard.style.opacity='1';sigCard.style.pointerEvents='auto';sigCard.onclick=function(){toggleDetail(sig);};
+      document.getElementById('badge-'+sig).textContent='Iniciar';document.getElementById('badge-'+sig).className='l-badge b-inicio';
+      document.getElementById('icon-'+sig).innerHTML='<i class="ti ti-book" style="color:#A0714F"></i>';}
     updateUI();
   }
   closeDetail(id);
 }
-
-// ── AFIRMACIONES ───────────────────────────────────────
-function buildAfirm() {
-  const hoy = new Date().getDay() % 21;
-  document.getElementById('afirm-grid').innerHTML = dias.map((d,i) => `
+function buildAfirm(){
+  const hoy=new Date().getDay()%21;
+  document.getElementById('afirm-grid').innerHTML=dias.map((d,i)=>`
     <div class="afirm-card${i===hoy?' hoy':''}">
       ${i===hoy?'<span class="hoy-tag">Hoy</span>':''}
       <div class="afirm-txt">"${d.afirm}"</div>
       <div class="afirm-ref">${d.afirmRef}</div>
       <div class="afirm-deco">🌿</div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
-
-// ── NAVEGACIÓN ─────────────────────────────────────────
-function setTab(btn, screen) {
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('screen-' + screen).classList.add('active');
-  syncNav(screen);
+function setTab(btn,screen){
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  btn.classList.add('active');document.getElementById('screen-'+screen).classList.add('active');
+  const map=['libro','habitos','afirmaciones','logros','proximo'];
+  document.querySelectorAll('.nav-item').forEach((n,i)=>n.classList.toggle('active',map[i]===screen));
 }
-
-function setNav(item, screen) {
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  item.classList.add('active');
-  document.getElementById('screen-' + screen).classList.add('active');
-  syncTab(screen);
+function setNav(item,screen){
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  item.classList.add('active');document.getElementById('screen-'+screen).classList.add('active');
+  const map=['libro','habitos','afirmaciones','logros','proximo'];
+  document.querySelectorAll('.nav-tab').forEach((t,i)=>t.classList.toggle('active',map[i]===screen));
 }
-
-function syncNav(screen) {
-  const map = ['libro','habitos','afirmaciones','logros','proximo'];
-  document.querySelectorAll('.nav-item').forEach((n,i) => n.classList.toggle('active', map[i]===screen));
-}
-
-function syncTab(screen) {
-  const map = ['libro','habitos','afirmaciones','logros','proximo'];
-  document.querySelectorAll('.nav-tab').forEach((t,i) => t.classList.toggle('active', map[i]===screen));
-}
-
-// ── TOAST ──────────────────────────────────────────────
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-
-// ── INIT ───────────────────────────────────────────────
-renderDia();
-buildAfirm();
-renderMedallas();
-updateUI();
-setTimeout(() => document.getElementById('splash').classList.add('hide'), 1800);
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+renderDia();buildAfirm();renderMedallas();updateUI();
+setTimeout(()=>document.getElementById('splash').classList.add('hide'),1800);
 </script>
 </body>
 </html>
